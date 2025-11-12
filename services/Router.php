@@ -14,7 +14,7 @@ class Router{
     public function dispatch($requesturi, $requestMethod){
         $path = parse_url($requesturi, PHP_URL_PATH);
         //Quitar prefijo
-        $path = str_replace('Broadway-Caterers', '', $path);
+        $path = str_replace('/Broadway-Caterers', '', $path);
 
         if($path === '/index.php'){
             $path = '/';
