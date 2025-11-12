@@ -1,0 +1,467 @@
+:root {
+    --primary: #397DEA;
+    --secondary: #EAA639;
+    --text-dark: #1f2937;
+    --text-light: #6b7280;
+    --bg-light: #f9fafb;
+    --bg-white: #ffffff;
+    --shadow: rgba(0, 0, 0, 0.05);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Libre Caslon Text', serif;
+    line-height: 1.6;
+    color: var(--text-dark);
+    background-color: var(--bg-white);
+}
+
+/* Progress Bar */
+.progress-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 4px;
+    background: linear-gradient(90deg, var(--primary), var(--secondary));
+    z-index: 9999;
+    transition: width 0.3s ease-out;
+    box-shadow: 0 2px 4px var(--shadow);
+}
+
+/* Header */
+header {
+    background-color: var(--bg-white);
+    box-shadow: 0 2px 10px var(--shadow);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+}
+
+header nav {
+    padding: 1rem 1.5rem;
+}
+
+header .flex > div:first-child {
+    font-size: 1.5rem;
+    color: var(--primary);
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+header .flex > div:first-child:hover {
+    color: var(--secondary);
+}
+
+header a {
+    color: var(--text-dark);
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    transition: all 0.3s ease;
+}
+
+header a:hover,
+header a:focus {
+    color: var(--primary);
+    background-color: rgba(57, 125, 234, 0.1);
+    transform: translateY(-2px);
+}
+
+header .bg-primary {
+    background-color: var(--primary) !important;
+    color: white !important;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.75rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+header .bg-primary:hover {
+    background-color: #2563eb !important;
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(57, 125, 234, 0.3);
+}
+
+/* Contact Hero */
+.contact-hero-bg {
+    background-color: #EAA639;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+section.relative.contact-hero-bg {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+
+section.relative.contact-hero-bg .absolute.inset-0 {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+}
+
+section.relative.contact-hero-bg .relative.z-10 h1 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+section.relative.contact-hero-bg .relative.z-10 p {
+    font-size: 1.25rem;
+    opacity: 0.9;
+    color: white;
+}
+
+/* Contact Cards */
+.bg-white.rounded-2xl.shadow-lg.border.border-gray-100 {
+    background-color: var(--bg-white);
+    border-radius: 1.5rem;
+    box-shadow: 0 4px 20px var(--shadow);
+    border: 1px solid rgba(229, 231, 235, 0.5);
+    transition: all 0.3s ease;
+    padding: 2rem;
+}
+
+.bg-white.rounded-2xl.shadow-lg.border.border-gray-100:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+    border-color: rgba(57, 125, 234, 0.2);
+}
+
+.bg-white.rounded-2xl.shadow-lg.border.border-gray-100 h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    color: var(--text-dark);
+}
+
+/* Contact Info Items */
+.bg-white.rounded-2xl.shadow-lg.border.border-gray-100 .flex.items-start {
+    margin-bottom: 1.5rem;
+}
+
+.bg-white.rounded-2xl.shadow-lg.border.border-gray-100 .w-12.h-12 {
+    width: 3rem;
+    height: 3rem;
+    background-color: rgba(57, 125, 234, 0.1);
+    border-radius: 0.75rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bg-white.rounded-2xl.shadow-lg.border.border-gray-100 i {
+    color: var(--primary);
+    font-size: 1rem;
+}
+
+.bg-white.rounded-2xl.shadow-lg.border.border-gray-100 h5 {
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+    color: var(--text-dark);
+}
+
+.bg-white.rounded-2xl.shadow-lg.border.border-gray-100 a {
+    color: var(--primary);
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.bg-white.rounded-2xl.shadow-lg.border.border-gray-100 a:hover {
+    color: #2563eb;
+}
+
+.bg-white.rounded-2xl.shadow-lg.border.border-gray-100 p {
+    color: var(--text-light);
+    font-size: 0.95rem;
+}
+
+/* Why Choose Us Card */
+.mt-8.p-6.bg-primary.bg-opacity-5.rounded-xl.border.border-primary.border-opacity-20 {
+    background-color: rgba(57, 125, 234, 0.05);
+    border: 1px solid rgba(57, 125, 234, 0.2);
+    border-radius: 1rem;
+    padding: 1.5rem;
+    margin-top: 2rem;
+}
+
+.mt-8.p-6.bg-primary.bg-opacity-5.rounded-xl.border.border-primary.border-opacity-20 h6 {
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--text-dark);
+}
+
+.mt-8.p-6.bg-primary.bg-opacity-5.rounded-xl.border.border-primary.border-opacity-20 .text-secondary {
+    color: var(--secondary);
+}
+
+.mt-8.p-6.bg-primary.bg-opacity-5.rounded-xl.border.border-primary.border-opacity-20 p {
+    color: var(--text-light);
+    font-size: 0.875rem;
+    margin-top: 0.5rem;
+}
+
+/* Form Styles */
+form#contactForm input,
+form#contactForm select,
+form#contactForm textarea {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 1px solid #d1d5db;
+    border-radius: 0.75rem;
+    font-size: 1rem;
+    color: var(--text-dark);
+    transition: all 0.3s ease;
+}
+
+form#contactForm input:focus,
+form#contactForm select:focus,
+form#contactForm textarea:focus {
+    outline: none;
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(57, 125, 234, 0.1);
+}
+
+form#contactForm label {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+    color: var(--text-dark);
+}
+
+form#contactForm button {
+    background-color: var(--primary) !important;
+    color: white !important;
+    padding: 1rem;
+    border-radius: 0.75rem;
+    font-weight: 600;
+    font-size: 1.125rem;
+    transition: all 0.3s ease;
+    margin-top: 0.5rem;
+}
+
+form#contactForm button:hover {
+    background-color: #2563eb !important;
+    transform: scale(1.02);
+    box-shadow: 0 4px 12px rgba(57, 125, 234, 0.3);
+}
+
+form#contactForm .flex.items-center input {
+    width: auto;
+    margin-right: 0.75rem;
+    margin-top: 0;
+}
+
+/* Map & Location Section */
+.py-20.bg-gray-50 {
+    background-color: var(--bg-light);
+    padding: 4rem 1rem;
+}
+
+.py-20.bg-gray-50 h3 {
+    font-size: 1.875rem;
+    font-weight: 800;
+    margin-bottom: 2rem;
+    color: var(--text-dark);
+}
+
+.py-20.bg-gray-50 p {
+    font-size: 1.125rem;
+    color: var(--text-light);
+    margin-bottom: 2rem;
+}
+
+.py-20.bg-gray-50 .bg-white.rounded-2xl.shadow-lg.p-8 {
+    background-color: var(--bg-white);
+    border-radius: 1.5rem;
+    padding: 2rem;
+    box-shadow: 0 10px 30px var(--shadow);
+    transition: all 0.3s ease;
+}
+
+.py-20.bg-gray-50 .bg-white.rounded-2xl.shadow-lg.p-8:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.12);
+}
+
+.py-20.bg-gray-50 .w-20.h-20 {
+    width: 5rem;
+    height: 5rem;
+    background-color: rgba(57, 125, 234, 0.1);
+    border-radius: 1.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+}
+
+.py-20.bg-gray-50 .w-20.h-20 i {
+    color: var(--primary);
+    font-size: 1.875rem;
+}
+
+.py-20.bg-gray-50 h4 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+    color: var(--text-dark);
+}
+
+.py-20.bg-gray-50 .p-4.bg-gray-50.rounded-lg {
+    background-color: var(--bg-light);
+    border-radius: 0.75rem;
+    padding: 1rem;
+    margin-top: 1.5rem;
+}
+
+.py-20.bg-gray-50 .p-4.bg-gray-50.rounded-lg i {
+    color: var(--primary);
+}
+
+/* Footer & WhatsApp - Reutilizados */
+footer {
+    background-color: var(--text-dark);
+    padding: 4rem 1rem;
+    color: white;
+}
+
+footer .font-\[\'Pacifico\'\] {
+    font-size: 1.5rem;
+    color: white;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+footer p {
+    color: #9ca3af;
+    margin-bottom: 1.5rem;
+}
+
+footer h4 {
+    font-size: 1.125rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: white;
+}
+
+footer ul li a {
+    color: #9ca3af;
+    transition: color 0.3s ease, padding-left 0.3s ease;
+    display: block;
+    padding: 0.25rem 0;
+}
+
+footer ul li a:hover {
+    color: var(--secondary);
+    padding-left: 0.5rem;
+}
+
+footer .flex.space-x-4 > a {
+    width: 2.5rem;
+    height: 2.5rem;
+    background-color: #374151;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+footer .flex.space-x-4 > a:hover {
+    background-color: var(--secondary);
+    transform: scale(1.1);
+}
+
+footer .border-t {
+    border-color: #374151;
+    padding-top: 1.5rem;
+    margin-top: 1.5rem;
+    text-align: center;
+}
+
+footer .border-t p {
+    color: #9ca3af;
+    font-size: 0.875rem;
+}
+
+footer .border-t a {
+    color: var(--secondary);
+    transition: color 0.3s ease;
+}
+
+footer .border-t a:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+.fixed.bottom-6.right-6 {
+    bottom: 24px;
+    right: 24px;
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, var(--secondary), #d97706);
+    border-radius: 50%;
+    box-shadow: 0 4px 12px rgba(234, 166, 57, 0.4);
+    transition: all 0.3s ease;
+    z-index: 9999;
+}
+
+.fixed.bottom-6.right-6:hover {
+    transform: scale(1.1) rotate(10deg);
+    box-shadow: 0 6px 16px rgba(234, 166, 57, 0.6);
+}
+
+.fixed.bottom-6.right-6 i {
+    color: white;
+    font-size: 1.5rem;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .lg\:col-span-1,
+    .lg\:col-span-2 {
+        grid-column: span 1 / span 1;
+    }
+}
+
+@media (max-width: 768px) {
+    header nav {
+        padding: 0.75rem 1rem;
+    }
+
+    header .flex > div:first-child {
+        font-size: 1.25rem;
+    }
+
+    section.relative.contact-hero-bg .relative.z-10 h1 {
+        font-size: 2rem;
+    }
+
+    section.relative.contact-hero-bg .relative.z-10 p {
+        font-size: 1rem;
+    }
+
+    .bg-white.rounded-2xl.shadow-lg.border.border-gray-100 {
+        padding: 1.5rem;
+    }
+
+    footer {
+        padding: 2rem 1rem;
+    }
+
+    footer .font-\[\'Pacifico\'\] {
+        font-size: 1.25rem;
+    }
+}
