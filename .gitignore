@@ -24,3 +24,4 @@ TestResults.xml
 #Variables de entorno
 .env
 assets.txt
+vendor
