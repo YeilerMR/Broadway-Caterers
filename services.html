@@ -1,0 +1,1041 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services - Broadway Commissary</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text&display=swap" rel="stylesheet">
+    <style>
+:root {
+    --primary: #397DEA;
+    --secondary: #EAA639;
+    --text-dark: #1f2937;
+    --text-light: #6b7280;
+    --bg-light: #f9fafb;
+    --bg-white: #ffffff;
+    --shadow: rgba(0, 0, 0, 0.05);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Libre Caslon Text', serif;
+    color: var(--text-dark);
+    background-color: var(--bg-white);
+}
+
+/* Progress Bar */
+.progress-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 4px;
+    background: linear-gradient(90deg, var(--primary), var(--secondary));
+    z-index: 9999;
+    transition: width 0.3s ease-out;
+    box-shadow: 0 2px 4px var(--shadow);
+}
+
+/* Header */
+header {
+    background-color: var(--bg-white);
+    box-shadow: 0 2px 10px var(--shadow);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+}
+
+header nav {
+    padding: 1rem 1.5rem;
+}
+
+header .flex > div:first-child {
+    font-size: 1.5rem;
+    color: var(--primary);
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+header .flex > div:first-child:hover {
+    color: var(--secondary);
+}
+
+header a {
+    color: var(--text-dark);
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    transition: all 0.3s ease;
+}
+
+header a:hover,
+header a:focus {
+    color: var(--primary);
+    background-color: rgba(57, 125, 234, 0.1);
+    transform: translateY(-2px);
+}
+
+header .bg-primary {
+    background-color: var(--primary) !important;
+    color: white !important;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.75rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+header .bg-primary:hover {
+    background-color: #2563eb !important;
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(57, 125, 234, 0.3);
+}
+
+/* Services Hero */
+.services-hero-bg {
+    background-color: #EAA639;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+section.relative.services-hero-bg {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+
+section.relative.services-hero-bg .absolute.inset-0 {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+}
+
+section.relative.services-hero-bg .relative.z-10 h1 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+section.relative.services-hero-bg .relative.z-10 p {
+    font-size: 1.25rem;
+    opacity: 0.9;
+    color: white;
+}
+
+/* Service Cards (General) */
+.bg-white.rounded-2xl.shadow-lg.border.border-gray-100.overflow-hidden {
+    background-color: var(--bg-white);
+    border-radius: 1.5rem;
+    box-shadow: 0 4px 20px var(--shadow);
+    border: 1px solid rgba(229, 231, 235, 0.5);
+    transition: all 0.3s ease;
+    padding: 0;
+}
+
+.bg-white.rounded-2xl.shadow-lg.border.border-gray-100.overflow-hidden:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+    border-color: rgba(57, 125, 234, 0.2);
+}
+
+.bg-white.rounded-2xl.shadow-lg.border.border-gray-100.overflow-hidden .p-8 {
+    padding: 2rem;
+}
+
+.bg-white.rounded-2xl.shadow-lg.border.border-gray-100.overflow-hidden .w-16.h-16 {
+    width: 4rem;
+    height: 4rem;
+    background-color: rgba(57, 125, 234, 0.1);
+    border-radius: 1rem;
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease;
+}
+
+.bg-white.rounded-2xl.shadow-lg.border.border-gray-100.overflow-hidden:hover .w-16.h-16 {
+    background-color: rgba(57, 125, 234, 0.2);
+}
+
+.bg-white.rounded-2xl.shadow-lg.border.border-gray-100.overflow-hidden i {
+    color: var(--primary);
+    font-size: 1.5rem;
+}
+
+.bg-white.rounded-2xl.shadow-lg.border.border-gray-100.overflow-hidden h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: var(--text-dark);
+    transition: color 0.3s ease;
+}
+
+.bg-white.rounded-2xl.shadow-lg.border.border-gray-100.overflow-hidden:hover h3 {
+    color: var(--primary);
+}
+
+.bg-white.rounded-2xl.shadow-lg.border.border-gray-100.overflow-hidden p {
+    color: var(--text-light);
+    margin-bottom: 1.5rem;
+    font-size: 1rem;
+}
+
+.bg-white.rounded-2xl.shadow-lg.border.border-gray-100.overflow-hidden ul.space-y-3 li {
+    display: flex;
+    align-items: center;
+    color: var(--text-dark);
+    font-size: 0.95rem;
+}
+
+.bg-white.rounded-2xl.shadow-lg.border.border-gray-100.overflow-hidden ul.space-y-3 li i {
+    width: 1.25rem;
+    height: 1.25rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bg-white.rounded-2xl.shadow-lg.border.border-gray-100.overflow-hidden ul.space-y-3 li.text-gray-500 i {
+    color: #9ca3af;
+}
+
+/* Service Packages Section */
+.py-20.bg-gray-50 .bg-white.rounded-2xl.shadow-lg.border.border-gray-100.overflow-hidden {
+    background-color: var(--bg-white);
+    border-radius: 1.5rem;
+    box-shadow: 0 10px 30px var(--shadow);
+    border: 1px solid rgba(229, 231, 235, 0.5);
+    transition: all 0.3s ease;
+}
+
+.py-20.bg-gray-50 .bg-white.rounded-2xl.shadow-lg.border.border-gray-100.overflow-hidden:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.12);
+}
+
+/* Professional Package - Most Popular */
+.py-20.bg-gray-50 .bg-white.rounded-2xl.shadow-2xl.border-2.border-primary.relative.overflow-hidden {
+    background-color: var(--bg-white);
+    border: 2px solid var(--primary);
+    box-shadow: 0 20px 40px rgba(57, 125, 234, 0.15);
+    transition: all 0.4s ease;
+}
+
+.py-20.bg-gray-50 .bg-white.rounded-2xl.shadow-2xl.border-2.border-primary.relative.overflow-hidden:hover {
+    transform: scale(1.03) translateY(-8px);
+    box-shadow: 0 24px 50px rgba(57, 125, 234, 0.25);
+}
+
+.py-20.bg-gray-50 .bg-primary.text-white.p-8.text-center {
+    background-color: var(--primary);
+    padding: 2rem;
+    color: white;
+}
+
+.py-20.bg-gray-50 .bg-primary.text-white.p-8.text-center h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.py-20.bg-gray-50 .bg-primary.text-white.p-8.text-center .text-4xl {
+    font-weight: 800;
+    margin-bottom: 0.5rem;
+}
+
+.py-20.bg-gray-50 .bg-primary.text-white.p-8.text-center p {
+    opacity: 0.9;
+    font-size: 1rem;
+}
+
+.py-20.bg-gray-50 .absolute.top-4.right-4 {
+    background-color: var(--secondary);
+    color: white;
+    font-weight: 600;
+    font-size: 0.85rem;
+    border-radius: 9999px;
+    padding: 0.25rem 0.75rem;
+}
+
+.py-20.bg-gray-50 .p-8 ul.space-y-4 li {
+    display: flex;
+    align-items: center;
+    font-size: 0.95rem;
+}
+
+.py-20.bg-gray-50 .p-8 ul.space-y-4 li i {
+    width: 1.25rem;
+    height: 1.25rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.py-20.bg-gray-50 .p-8 a.block.w-full.bg-primary.text-white.text-center.py-3.rounded-lg {
+    background-color: var(--primary) !important;
+    color: white !important;
+    padding: 0.75rem;
+    border-radius: 0.75rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.py-20.bg-gray-50 .p-8 a.block.w-full.bg-primary.text-white.text-center.py-3.rounded-lg:hover {
+    background-color: #2563eb !important;
+    transform: scale(1.03);
+    box-shadow: 0 4px 12px rgba(57, 125, 234, 0.3);
+}
+
+/* CTA Section */
+.py-20.bg-primary {
+    background-color: var(--primary);
+    padding: 4rem 1rem;
+    text-align: center;
+}
+
+.py-20.bg-primary h2 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 1.5rem;
+    color: white;
+}
+
+.py-20.bg-primary p {
+    font-size: 1.25rem;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 2rem;
+}
+
+.py-20.bg-primary a {
+    background-color: white !important;
+    color: var(--primary) !important;
+    padding: 1rem 2rem;
+    font-size: 1.125rem;
+    font-weight: 600;
+    border-radius: 0.75rem;
+    transition: all 0.3s ease;
+}
+
+.py-20.bg-primary a:hover {
+    background-color: #f3f4f6 !important;
+    transform: scale(1.05);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer & WhatsApp - Reutilizados */
+footer {
+    background-color: var(--text-dark);
+    padding: 4rem 1rem;
+    color: white;
+}
+
+footer .font-\[\'Pacifico\'\] {
+    font-size: 1.5rem;
+    color: white;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+footer p {
+    color: #9ca3af;
+    margin-bottom: 1.5rem;
+}
+
+footer h4 {
+    font-size: 1.125rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: white;
+}
+
+footer ul li a {
+    color: #9ca3af;
+    transition: color 0.3s ease, padding-left 0.3s ease;
+    display: block;
+    padding: 0.25rem 0;
+}
+
+footer ul li a:hover {
+    color: var(--secondary);
+    padding-left: 0.5rem;
+}
+
+footer .flex.space-x-4 > a {
+    width: 2.5rem;
+    height: 2.5rem;
+    background-color: #374151;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+footer .flex.space-x-4 > a:hover {
+    background-color: var(--secondary);
+    transform: scale(1.1);
+}
+
+footer .border-t {
+    border-color: #374151;
+    padding-top: 1.5rem;
+    margin-top: 1.5rem;
+    text-align: center;
+}
+
+footer .border-t p {
+    color: #9ca3af;
+    font-size: 0.875rem;
+}
+
+footer .border-t a {
+    color: var(--secondary);
+    transition: color 0.3s ease;
+}
+
+footer .border-t a:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+.fixed.bottom-6.right-6 {
+    bottom: 24px;
+    right: 24px;
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, var(--secondary), #d97706);
+    border-radius: 50%;
+    box-shadow: 0 4px 12px rgba(234, 166, 57, 0.4);
+    transition: all 0.3s ease;
+    z-index: 9999;
+}
+
+.fixed.bottom-6.right-6:hover {
+    transform: scale(1.1) rotate(10deg);
+    box-shadow: 0 6px 16px rgba(234, 166, 57, 0.6);
+}
+
+.fixed.bottom-6.right-6 i {
+    color: white;
+    font-size: 1.5rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    header nav {
+        padding: 0.75rem 1rem;
+    }
+
+    header .flex > div:first-child {
+        font-size: 1.25rem;
+    }
+
+    section.relative.services-hero-bg .relative.z-10 h1 {
+        font-size: 2rem;
+    }
+
+    section.relative.services-hero-bg .relative.z-10 p {
+        font-size: 1rem;
+    }
+
+    .bg-white.rounded-2xl.shadow-lg .p-8 {
+        padding: 1.5rem;
+    }
+
+    .py-20.bg-gray-50 .bg-primary.text-white.p-8.text-center {
+        padding: 1.5rem;
+    }
+
+    footer {
+        padding: 2rem 1rem;
+    }
+
+    footer .font-\[\'Pacifico\'\] {
+        font-size: 1.25rem;
+    }
+}
+</style>
+</head>
+<body class="bg-white">
+    <!-- Progress Bar -->
+    <div class="progress-bar"></div>
+
+    <!-- Header -->
+    <header class="bg-white shadow-sm fixed w-full top-0 z-50">
+        <nav class="px-6 py-4">
+            <div class="flex items-center justify-between max-w-7xl mx-auto">
+                <div class="font-['Pacifico'] text-2xl text-primary">
+                    <i class="fas fa-building mr-2"></i>Broadway Commissary
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="text-gray-700 hover:text-primary transition-colors font-medium">Home</a>
+                    <a href="about.html" class="text-gray-700 hover:text-primary transition-colors font-medium">About Us</a>
+                    <a href="services.html" class="text-primary font-medium">Services</a>
+                    <a href="licensing.html" class="text-gray-700 hover:text-primary transition-colors font-medium">Licensing</a>
+                    <a href="contact.html" class="text-gray-700 hover:text-primary transition-colors font-medium">Contact</a>
+                </div>
+                <a href="contact.html" class="bg-primary text-white px-6 py-2 rounded-lg hover:bg-blue-600 transition-colors whitespace-nowrap font-medium">
+                    Get Free Consultation
+                </a>
+                <button class="md:hidden w-8 h-8 flex items-center justify-center">
+                    <i class="ri-menu-line text-xl"></i>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Services Hero -->
+    <section class="relative services-hero-bg flex items-center justify-center pt-20">
+        <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+        <div class="relative z-10 text-center text-white max-w-4xl mx-auto px-6 py-20">
+            <h1 class="text-5xl md:text-6xl font-bold mb-6">Our Complete Services</h1>
+            <p class="text-xl md:text-2xl opacity-90">Everything You Need to Launch and Grow Your Food Business in Florida</p>
+        </div>
+    </section>
+
+    <!-- Food & Catering Services -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">Food & Catering Services</h2>
+                <p class="text-xl text-gray-600">Professional culinary solutions for every occasion</p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Catering & Event Planning -->
+                <div class="bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden hover:shadow-xl transition-shadow">
+                    <div class="p-8">
+                        <div class="w-16 h-16 flex items-center justify-center bg-primary bg-opacity-10 rounded-xl mb-6">
+                            <i class="fas fa-utensils text-2xl text-primary"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-4">Catering & Event Planning</h3>
+                        <p class="text-gray-600 mb-6">Full-service catering for corporate events, weddings, celebrations, and private gatherings.</p>
+                        <ul class="space-y-3 mb-6">
+                            <li class="flex items-center text-gray-700">
+                                <i class="fas fa-check text-primary mr-3"></i>
+                                Custom menu development
+                            </li>
+                            <li class="flex items-center text-gray-700">
+                                <i class="fas fa-check text-primary mr-3"></i>
+                                Dietary accommodation
+                            </li>
+                            <li class="flex items-center text-gray-700">
+                                <i class="fas fa-check text-primary mr-3"></i>
+                                Professional service staff
+                            </li>
+                            <li class="flex items-center text-gray-700">
+                                <i class="fas fa-check text-primary mr-3"></i>
+                                Setup and cleanup included
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Commissary Kitchen Services -->
+                <div class="bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden hover:shadow-xl transition-shadow">
+                    <div class="p-8">
+                        <div class="w-16 h-16 flex items-center justify-center bg-primary bg-opacity-10 rounded-xl mb-6">
+                            <i class="fas fa-home text-2xl text-primary"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-4">Commissary Kitchen Services</h3>
+                        <p class="text-gray-600 mb-6">Access to fully licensed, inspected commercial kitchens for food preparation and operations.</p>
+                        <ul class="space-y-3 mb-6">
+                            <li class="flex items-center text-gray-700">
+                                <i class="fas fa-check text-primary mr-3"></i>
+                                State-approved facilities
+                            </li>
+                            <li class="flex items-center text-gray-700">
+                                <i class="fas fa-check text-primary mr-3"></i>
+                                Fully equipped stations
+                            </li>
+                            <li class="flex items-center text-gray-700">
+                                <i class="fas fa-check text-primary mr-3"></i>
+                                Storage facilities available
+                            </li>
+                            <li class="flex items-center text-gray-700">
+                                <i class="fas fa-check text-primary mr-3"></i>
+                                Flexible hourly rates
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Food Truck Rental -->
+                <div class="bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden hover:shadow-xl transition-shadow">
+                    <div class="p-8">
+                        <div class="w-16 h-16 flex items-center justify-center bg-primary bg-opacity-10 rounded-xl mb-6">
+                            <i class="fas fa-truck text-2xl text-primary"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-4">Food Truck Rental</h3>
+                        <p class="text-gray-600 mb-6">Fully licensed, inspected, and equipped food trucks available for temporary or permanent operations.</p>
+                        <ul class="space-y-3 mb-6">
+                            <li class="flex items-center text-gray-700">
+                                <i class="fas fa-check text-primary mr-3"></i>
+                                Pre-licensed vehicles
+                            </li>
+                            <li class="flex items-center text-gray-700">
+                                <i class="fas fa-check text-primary mr-3"></i>
+                                Complete kitchen setup
+                            </li>
+                            <li class="flex items-center text-gray-700">
+                                <i class="fas fa-check text-primary mr-3"></i>
+                                Insurance included
+                            </li>
+                            <li class="flex items-center text-gray-700">
+                                <i class="fas fa-check text-primary mr-3"></i>
+                                Flexible rental terms
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Licensing & Certification -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">Licensing & Certification</h2>
+                <p class="text-xl text-gray-600">Complete compliance solutions for your business</p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Business License Registration -->
+                <div class="bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden hover:shadow-xl transition-shadow">
+                    <div class="p-8">
+                        <div class="w-16 h-16 flex items-center justify-center bg-primary bg-opacity-10 rounded-xl mb-6">
+                            <i class="fas fa-file-alt text-2xl text-primary"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-4">Business License Registration</h3>
+                        <p class="text-gray-600 mb-6">Complete handling of state and local business license applications and renewals.</p>
+                        <ul class="space-y-3">
+                            <li class="flex items-center text-gray-700">
+                                <i class="fas fa-check text-primary mr-3"></i>
+                                State business registration
+                            </li>
+                            <li class="flex items-center text-gray-700">
+                                <i class="fas fa-check text-primary mr-3"></i>
+                                Local license applications
+                            </li>
+                            <li class="flex items-center text-gray-700">
+                                <i class="fas fa-check text-primary mr-3"></i>
+                                Annual renewals
+                            </li>
+                            <li class="flex items-center text-gray-700">
+                                <i class="fas fa-check text-primary mr-3"></i>
+                                Compliance monitoring
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- ServSafe Certification -->
+                <div class="bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden hover:shadow-xl transition-shadow">
+                    <div class="p-8">
+                        <div class="w-16 h-16 flex items-center justify-center bg-primary bg-opacity-10 rounded-xl mb-6">
+                            <i class="fas fa-graduation-cap text-2xl text-primary"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-4">ServSafe Food Manager Exam</h3>
+                        <p class="text-gray-600 mb-6">Official Food Handler and ServSafe Manager certification courses and exam preparation.</p>
+                        <ul class="space-y-3">
+                            <li class="flex items-center text-gray-700">
+                                <i class="fas fa-check text-primary mr-3"></i>
+                                In-person and online options
+                            </li>
+                            <li class="flex items-center text-gray-700">
+                                <i class="fas fa-check text-primary mr-3"></i>
+                                Same-day exam completion
+                            </li>
+                            <li class="flex items-center text-gray-700">
+                                <i class="fas fa-check text-primary mr-3"></i>
+                                100% pass guarantee prep
+                            </li>
+                            <li class="flex items-center text-gray-700">
+                                <i class="fas fa-check text-primary mr-3"></i>
+                                Certificate upon completion
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Tax Registration Services -->
+                <div class="bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden hover:shadow-xl transition-shadow">
+                    <div class="p-8">
+                        <div class="w-16 h-16 flex items-center justify-center bg-primary bg-opacity-10 rounded-xl mb-6">
+                            <i class="fas fa-receipt text-2xl text-primary"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-4">Tax Registration Services</h3>
+                        <p class="text-gray-600 mb-6">Complete sales tax and business tax receipt registration at county and city levels.</p>
+                        <ul class="space-y-3">
+                            <li class="flex items-center text-gray-700">
+                                <i class="fas fa-check text-primary mr-3"></i>
+                                Tax account creation
+                            </li>
+                            <li class="flex items-center text-gray-700">
+                                <i class="fas fa-check text-primary mr-3"></i>
+                                Nexus determination
+                            </li>
+                            <li class="flex items-center text-gray-700">
+                                <i class="fas fa-check text-primary mr-3"></i>
+                                Filing schedule setup
+                            </li>
+                            <li class="flex items-center text-gray-700">
+                                <i class="fas fa-check text-primary mr-3"></i>
+                                Ongoing compliance
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Business Formation & Support -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">Business Formation & Support</h2>
+                <p class="text-xl text-gray-600">Complete business setup and operational support</p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Business Entity Formation -->
+                <div class="bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden hover:shadow-xl transition-shadow">
+                    <div class="p-8">
+                        <div class="w-16 h-16 flex items-center justify-center bg-primary bg-opacity-10 rounded-xl mb-6">
+                            <i class="fas fa-building text-2xl text-primary"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-4">Business Entity Formation</h3>
+                        <p class="text-gray-600 mb-6">Complete business entity formation including LLC, S-Corp, and C-Corp setup.</p>
+                        <ul class="space-y-3">
+                            <li class="flex items-center text-gray-700">
+                                <i class="fas fa-check text-primary mr-3"></i>
+                                Entity comparison analysis
+                            </li>
+                            <li class="flex items-center text-gray-700">
+                                <i class="fas fa-check text-primary mr-3"></i>
+                                Complete filing package
+                            </li>
+                            <li class="flex items-center text-gray-700">
+                                <i class="fas fa-check text-primary mr-3"></i>
+                                EIN application
+                            </li>
+                            <li class="flex items-center text-gray-700">
+                                <i class="fas fa-check text-primary mr-3"></i>
+                                Operating agreements
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- HACCP Plan Development -->
+                <div class="bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden hover:shadow-xl transition-shadow">
+                    <div class="p-8">
+                        <div class="w-16 h-16 flex items-center justify-center bg-primary bg-opacity-10 rounded-xl mb-6">
+                            <i class="fas fa-clipboard-check text-2xl text-primary"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-4">HACCP Plan Development</h3>
+                        <p class="text-gray-600 mb-6">Professional development of Hazard Analysis and Critical Control Points plans.</p>
+                        <ul class="space-y-3">
+                            <li class="flex items-center text-gray-700">
+                                <i class="fas fa-check text-primary mr-3"></i>
+                                Hazard analysis
+                            </li>
+                            <li class="flex items-center text-gray-700">
+                                <i class="fas fa-check text-primary mr-3"></i>
+                                Critical control points
+                            </li>
+                            <li class="flex items-center text-gray-700">
+                                <i class="fas fa-check text-primary mr-3"></i>
+                                Monitoring procedures
+                            </li>
+                            <li class="flex items-center text-gray-700">
+                                <i class="fas fa-check text-primary mr-3"></i>
+                                Documentation systems
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Equipment Repair & Maintenance -->
+                <div class="bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden hover:shadow-xl transition-shadow">
+                    <div class="p-8">
+                        <div class="w-16 h-16 flex items-center justify-center bg-primary bg-opacity-10 rounded-xl mb-6">
+                            <i class="fas fa-tools text-2xl text-primary"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-4">Equipment Repair & Maintenance</h3>
+                        <p class="text-gray-600 mb-6">Professional repair and maintenance of commercial kitchen equipment.</p>
+                        <ul class="space-y-3">
+                            <li class="flex items-center text-gray-700">
+                                <i class="fas fa-check text-primary mr-3"></i>
+                                Emergency repairs
+                            </li>
+                            <li class="flex items-center text-gray-700">
+                                <i class="fas fa-check text-primary mr-3"></i>
+                                Preventive maintenance
+                            </li>
+                            <li class="flex items-center text-gray-700">
+                                <i class="fas fa-check text-primary mr-3"></i>
+                                Parts replacement
+                            </li>
+                            <li class="flex items-center text-gray-700">
+                                <i class="fas fa-check text-primary mr-3"></i>
+                                Vendor coordination
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Service Packages -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">Service Packages</h2>
+                <p class="text-xl text-gray-600">Choose the perfect package for your business needs</p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Starter Package -->
+                <div class="bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden">
+                    <div class="bg-primary text-white p-8 text-center">
+                        <h3 class="text-2xl font-bold mb-2">Starter Package</h3>
+                        <div class="text-4xl font-bold mb-2">$499</div>
+                        <p class="opacity-90">Perfect for new food businesses</p>
+                    </div>
+                    <div class="p-8">
+                        <ul class="space-y-4 mb-8">
+                            <li class="flex items-center text-gray-700">
+                                <i class="fas fa-check text-primary mr-3"></i>
+                                Business License Registration
+                            </li>
+                            <li class="flex items-center text-gray-700">
+                                <i class="fas fa-check text-primary mr-3"></i>
+                                FDACS/DBPR Application
+                            </li>
+                            <li class="flex items-center text-gray-700">
+                                <i class="fas fa-check text-primary mr-3"></i>
+                                Basic Consultation
+                            </li>
+                            <li class="flex items-center text-gray-500">
+                                <i class="fas fa-times mr-3"></i>
+                                Ongoing Support
+                            </li>
+                            <li class="flex items-center text-gray-500">
+                                <i class="fas fa-times mr-3"></i>
+                                Tax Registration
+                            </li>
+                        </ul>
+                        <a href="contact.html" class="block w-full bg-primary text-white text-center py-3 rounded-lg hover:bg-blue-600 transition-colors font-medium">
+                            Get Started
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Professional Package -->
+                <div class="bg-white rounded-2xl shadow-2xl border-2 border-primary relative overflow-hidden transform hover:scale-105 transition-transform">
+                    <div class="bg-primary text-white p-8 text-center">
+                        <div class="absolute top-4 right-4 bg-secondary text-white px-3 py-1 rounded-full text-sm font-medium">
+                            Most Popular
+                        </div>
+                        <h3 class="text-2xl font-bold mb-2">Professional Package</h3>
+                        <div class="text-4xl font-bold mb-2">$899</div>
+                        <p class="opacity-90">Complete Business Setup</p>
+                    </div>
+                    <div class="p-8">
+                        <ul class="space-y-4 mb-8">
+                            <li class="flex items-center text-gray-700">
+                                <i class="fas fa-check text-primary mr-3"></i>
+                                All Starter Features
+                            </li>
+                            <li class="flex items-center text-gray-700">
+                                <i class="fas fa-check text-primary mr-3"></i>
+                                LLC Formation
+                            </li>
+                            <li class="flex items-center text-gray-700">
+                                <i class="fas fa-check text-primary mr-3"></i>
+                                Tax Registration
+                            </li>
+                            <li class="flex items-center text-gray-700">
+                                <i class="fas fa-check text-primary mr-3"></i>
+                                6 Months Support
+                            </li>
+                            <li class="flex items-center text-gray-700">
+                                <i class="fas fa-check text-primary mr-3"></i>
+                                ServSafe Certification
+                            </li>
+                        </ul>
+                        <a href="contact.html" class="block w-full bg-primary text-white text-center py-3 rounded-lg hover:bg-blue-600 transition-colors font-medium">
+                            Get Started
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Enterprise Package -->
+                <div class="bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden">
+                    <div class="bg-primary text-white p-8 text-center">
+                        <h3 class="text-2xl font-bold mb-2">Enterprise Package</h3>
+                        <div class="text-4xl font-bold mb-2">$1,499</div>
+                        <p class="opacity-90">For established businesses</p>
+                    </div>
+                    <div class="p-8">
+                        <ul class="space-y-4 mb-8">
+                            <li class="flex items-center text-gray-700">
+                                <i class="fas fa-check text-primary mr-3"></i>
+                                All Professional Features
+                            </li>
+                            <li class="flex items-center text-gray-700">
+                                <i class="fas fa-check text-primary mr-3"></i>
+                                Commissary Kitchen Access
+                            </li>
+                            <li class="flex items-center text-gray-700">
+                                <i class="fas fa-check text-primary mr-3"></i>
+                                HACCP Plan Development
+                            </li>
+                            <li class="flex items-center text-gray-700">
+                                <i class="fas fa-check text-primary mr-3"></i>
+                                1 Year Ongoing Support
+                            </li>
+                            <li class="flex items-center text-gray-700">
+                                <i class="fas fa-check text-primary mr-3"></i>
+                                Priority Service
+                            </li>
+                        </ul>
+                        <a href="contact.html" class="block w-full bg-primary text-white text-center py-3 rounded-lg hover:bg-blue-600 transition-colors font-medium">
+                            Get Started
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 bg-primary">
+        <div class="max-w-4xl mx-auto text-center px-6">
+            <h2 class="text-4xl font-bold text-white mb-6">Need Custom Services?</h2>
+            <p class="text-xl text-white opacity-90 mb-8">
+                Contact us for a personalized service package tailored to your specific business needs.
+            </p>
+            <a href="contact.html" class="bg-white text-primary px-8 py-4 rounded-lg text-lg hover:bg-gray-100 transition-colors whitespace-nowrap font-medium">
+                Get Custom Quote
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-16">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <div class="font-['Pacifico'] text-2xl text-white mb-6">
+                        <i class="fas fa-building mr-2"></i>Broadway Commissary
+                    </div>
+                    <p class="text-gray-300 mb-6">
+                        Your trusted partner in Florida business licensing and commissary services.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 flex items-center justify-center bg-gray-800 rounded-full hover:bg-secondary transition-colors">
+                            <i class="ri-facebook-fill"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 flex items-center justify-center bg-gray-800 rounded-full hover:bg-secondary transition-colors">
+                            <i class="ri-instagram-line"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 flex items-center justify-center bg-gray-800 rounded-full hover:bg-secondary transition-colors">
+                            <i class="ri-linkedin-fill"></i>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-6">Quick Links</h4>
+                    <ul class="space-y-3">
+                        <li><a href="index.html" class="text-gray-300 hover:text-secondary transition-colors">Home</a></li>
+                        <li><a href="about.html" class="text-gray-300 hover:text-secondary transition-colors">About Us</a></li>
+                        <li><a href="services.html" class="text-gray-300 hover:text-secondary transition-colors">Services</a></li>
+                        <li><a href="licensing.html" class="text-gray-300 hover:text-secondary transition-colors">Licensing</a></li>
+                        <li><a href="contact.html" class="text-gray-300 hover:text-secondary transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-6">Services</h4>
+                    <ul class="space-y-3">
+                        <li><a href="services.html" class="text-gray-300 hover:text-secondary transition-colors">Business Licensing</a></li>
+                        <li><a href="services.html" class="text-gray-300 hover:text-secondary transition-colors">Commissary Kitchen</a></li>
+                        <li><a href="services.html" class="text-gray-300 hover:text-secondary transition-colors">Catering Services</a></li>
+                        <li><a href="services.html" class="text-gray-300 hover:text-secondary transition-colors">Food Truck Rental</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-6">Contact Information</h4>
+                    <div class="space-y-4">
+                        <div class="flex items-center">
+                            <i class="ri-phone-line mr-3 text-secondary"></i>
+                            <span class="text-gray-300">(123) 456-7890</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="ri-mail-line mr-3 text-secondary"></i>
+                            <span class="text-gray-300">info@broadwaycommissary.com</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="ri-globe-line mr-3 text-secondary"></i>
+                            <span class="text-gray-300">dreamsgonemobile.com</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
+                <p>© 2025 Broadway Commissary. All rights reserved. | <a href="#" class="hover:text-secondary">Privacy Policy</a> | <a href="#" class="hover:text-secondary">Terms of Service</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Flotante -->
+    <a href="https://wa.me/1234567890" class="fixed bottom-6 right-6 w-14 h-14 flex items-center justify-center bg-secondary rounded-full shadow-lg hover:bg-yellow-600 transition-colors z-50">
+        <i class="ri-whatsapp-line text-white text-2xl"></i>
+    </a>
+
+    <script>
+        // Progress Bar
+        document.addEventListener("DOMContentLoaded", function () {
+            const progressBar = document.querySelector(".progress-bar");
+            window.addEventListener("scroll", function () {
+                const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+                const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+                const scrolled = (winScroll / height) * 100;
+                progressBar.style.width = scrolled + "%";
+            });
+
+            // Smooth Scroll for navigation links
+            const links = document.querySelectorAll('a[href^="#"]');
+            links.forEach((link) => {
+                link.addEventListener("click", function (e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute("href").substring(1);
+                    const targetElement = document.getElementById(targetId);
+                    if (targetElement) {
+                        const offsetTop = targetElement.offsetTop - 80;
+                        window.scrollTo({
+                            top: offsetTop,
+                            behavior: "smooth",
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

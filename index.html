@@ -1,0 +1,1034 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Broadway Commissary - Florida Licensing & Catering Services</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text&display=swap" rel="stylesheet">
+
+    <style>
+      :root {
+        --primary: #397dea;
+        --secondary: #eaa639;
+        --text-dark: #1f2937;
+        --text-light: #6b7280;
+        --bg-light: #f9fafb;
+        --bg-white: #ffffff;
+        --shadow: rgba(0, 0, 0, 0.05);
+      }
+
+      /* Reset básico y tipografía */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: 'Libre Caslon Text', serif;
+        line-height: 1.6;
+        color: var(--text-dark);
+        background-color: var(--bg-white);
+      }
+
+      /* Progress Bar - Mejorado */
+      .progress-bar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 0%;
+        height: 4px;
+        background: linear-gradient(90deg, var(--primary), var(--secondary));
+        z-index: 9999;
+        transition: width 0.3s ease-out, background 0.3s ease;
+        box-shadow: 0 2px 4px var(--shadow);
+      }
+
+      /* Header - Más elegante y con hover */
+      header {
+        background-color: var(--bg-white);
+        box-shadow: 0 2px 10px var(--shadow);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        transition: all 0.3s ease;
+      }
+
+      header nav {
+        padding: 1rem 1.5rem;
+      }
+
+      header .flex > div:first-child {
+        font-size: 1.5rem;
+        color: var(--primary);
+        font-weight: bold;
+        transition: color 0.3s ease;
+      }
+
+      header .flex > div:first-child:hover {
+        color: var(--secondary);
+      }
+
+      header a {
+        color: var(--text-dark);
+        font-weight: 500;
+        padding: 0.5rem 1rem;
+        border-radius: 0.5rem;
+        transition: all 0.3s ease;
+      }
+
+      header a:hover,
+      header a:focus {
+        color: var(--primary);
+        background-color: rgba(57, 125, 234, 0.1);
+        transform: translateY(-2px);
+      }
+
+      header .bg-primary {
+        background-color: var(--primary) !important;
+        color: white !important;
+        padding: 0.75rem 1.5rem;
+        border-radius: 0.75rem;
+        font-weight: 600;
+        transition: all 0.3s ease;
+      }
+
+      header .bg-primary:hover {
+        background-color: #2563eb !important;
+        transform: scale(1.05);
+        box-shadow: 0 4px 12px rgba(57, 125, 234, 0.3);
+      }
+
+      /* Hero Section - Más impactante */
+      .hero-bg {
+        background-image: url("https://readdy.ai/api/search-image?query=elegant%20catering%20event%20setup%20with%20professional%20licensing%20documents%20modern%20business%20atmosphere%20warm%20lighting%20sophisticated%20dining%20room%20setup&width=1920&height=1080&seq=hero1&orientation=landscape");
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+      }
+
+      section.relative.h-screen {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding-top: 4rem;
+      }
+
+      section.relative.h-screen .absolute.inset-0 {
+        background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+      }
+
+      section.relative.h-screen .relative.z-10 h1 {
+        font-size: 2.5rem;
+        font-weight: 800;
+        letter-spacing: -0.02em;
+        margin-bottom: 1rem;
+        color: white;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        animation: fadeInUp 1s ease-out;
+      }
+
+      section.relative.h-screen .relative.z-10 p {
+        font-size: 1.25rem;
+        margin-bottom: 2rem;
+        opacity: 0.9;
+        animation: fadeInUp 1s ease-out 0.2s both;
+      }
+
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      section.relative.h-screen .relative.z-10 .flex > a {
+        padding: 1rem 1.5rem;
+        font-size: 1.125rem;
+        font-weight: 600;
+        border-radius: 0.75rem;
+        transition: all 0.3s ease;
+        margin: 0.5rem;
+        min-width: 180px;
+      }
+
+      section.relative.h-screen .relative.z-10 .flex > a:first-child {
+        background-color: var(--primary);
+        color: white;
+      }
+
+      section.relative.h-screen .relative.z-10 .flex > a:first-child:hover {
+        background-color: #2563eb;
+        transform: scale(1.05);
+        box-shadow: 0 4px 12px rgba(57, 125, 234, 0.3);
+      }
+
+      section.relative.h-screen .relative.z-10 .flex > a:last-child {
+        background-color: var(--secondary);
+        color: white;
+      }
+
+      section.relative.h-screen .relative.z-10 .flex > a:last-child:hover {
+        background-color: #d97706;
+        transform: scale(1.05);
+        box-shadow: 0 4px 12px rgba(234, 166, 57, 0.3);
+      }
+
+      /* Quick Info & Services Cards - Hover y sombras */
+      .bg-white.p-8.rounded-xl.shadow-lg {
+        background-color: var(--bg-white);
+        border-radius: 1rem;
+        box-shadow: 0 4px 20px var(--shadow);
+        transition: all 0.3s ease;
+        padding: 2rem;
+        border: 1px solid rgba(229, 231, 235, 0.5);
+      }
+
+      .bg-white.p-8.rounded-xl.shadow-lg:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+        border-color: rgba(57, 125, 234, 0.2);
+      }
+
+      .bg-white.p-8.rounded-xl.shadow-lg .w-16.h-16 {
+        width: 4rem;
+        height: 4rem;
+        background-color: rgba(57, 125, 234, 0.1);
+        border-radius: 1rem;
+        margin-bottom: 1.5rem;
+        transition: background-color 0.3s ease;
+      }
+
+      .bg-white.p-8.rounded-xl.shadow-lg .w-16.h-16:hover {
+        background-color: rgba(57, 125, 234, 0.2);
+      }
+
+      .bg-white.p-8.rounded-xl.shadow-lg h3 {
+        font-size: 1.5rem;
+        font-weight: 700;
+        margin-bottom: 0.75rem;
+        color: var(--text-dark);
+        transition: color 0.3s ease;
+      }
+
+      .bg-white.p-8.rounded-xl.shadow-lg h3:hover {
+        color: var(--primary);
+      }
+
+      /* Services Grid Cards - Con hover y borde sutil */
+      .grid.md\:grid-cols-2.lg\:grid-cols-4.gap-6 > div {
+        background-color: var(--bg-white);
+        border-radius: 1rem;
+        box-shadow: 0 4px 16px var(--shadow);
+        transition: all 0.3s ease;
+        padding: 1.5rem;
+        border: 1px solid rgba(229, 231, 235, 0.5);
+        text-align: center;
+      }
+
+      .grid.md\:grid-cols-2.lg\:grid-cols-4.gap-6 > div:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+        border-color: rgba(57, 125, 234, 0.3);
+      }
+
+      .grid.md\:grid-cols-2.lg\:grid-cols-4.gap-6 > div i {
+        font-size: 2.5rem;
+        color: var(--primary);
+        margin-bottom: 1rem;
+        transition: color 0.3s ease;
+      }
+
+      .grid.md\:grid-cols-2.lg\:grid-cols-4.gap-6 > div:hover i {
+        color: var(--secondary);
+      }
+
+      .grid.md\:grid-cols-2.lg\:grid-cols-4.gap-6 > div h4 {
+        font-size: 1.25rem;
+        font-weight: 700;
+        margin-bottom: 0.5rem;
+        color: var(--text-dark);
+        transition: color 0.3s ease;
+      }
+
+      .grid.md\:grid-cols-2.lg\:grid-cols-4.gap-6 > div:hover h4 {
+        color: var(--primary);
+      }
+
+      /* Stats Section - Gradiente vibrante */
+      .py-20.bg-gradient-to-r.from-primary.to-blue-600 {
+        background: linear-gradient(90deg, var(--primary), #2563eb);
+        color: white;
+        padding: 4rem 1rem;
+      }
+
+      .py-20.bg-gradient-to-r.from-primary.to-blue-600 .counter {
+        font-size: 3rem;
+        font-weight: 800;
+        margin-bottom: 0.5rem;
+        animation: countUp 1s ease-out;
+      }
+
+      @keyframes countUp {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      /* Gallery Section - Hover con zoom y overlay */
+      .gallery-item {
+        position: relative;
+        overflow: hidden;
+        border-radius: 1rem;
+        cursor: pointer;
+        transition: transform 0.3s ease;
+      }
+
+      .gallery-item:hover {
+        transform: scale(1.03);
+      }
+
+      .gallery-item img {
+        width: 100%;
+        height: 250px;
+        object-fit: cover;
+        transition: transform 0.5s ease;
+      }
+
+      .gallery-item:hover img {
+        transform: scale(1.1);
+      }
+
+      .gallery-item .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(57, 125, 234, 0.8);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+      }
+
+      .gallery-item:hover .overlay {
+        opacity: 1;
+      }
+
+      .gallery-item .overlay i {
+        color: white;
+        font-size: 2rem;
+        transition: transform 0.3s ease;
+      }
+
+      .gallery-item:hover .overlay i {
+        transform: scale(1.2);
+      }
+
+      /* CTA Section - Botón destacado */
+      .py-20.bg-primary {
+        background-color: var(--primary);
+        padding: 4rem 1rem;
+        text-align: center;
+      }
+
+      .py-20.bg-primary h2 {
+        font-size: 2.5rem;
+        font-weight: 800;
+        margin-bottom: 1rem;
+        color: white;
+      }
+
+      .py-20.bg-primary p {
+        font-size: 1.25rem;
+        margin-bottom: 2rem;
+        color: rgba(255, 255, 255, 0.9);
+      }
+
+      .py-20.bg-primary .bg-white {
+        background-color: white !important;
+        color: var(--primary) !important;
+        padding: 1rem 2rem;
+        font-size: 1.125rem;
+        font-weight: 600;
+        border-radius: 0.75rem;
+        transition: all 0.3s ease;
+      }
+
+      .py-20.bg-primary .bg-white:hover {
+        background-color: #f3f4f6 !important;
+        transform: scale(1.05);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      }
+
+      /* Footer - Moderno y con hover */
+      footer {
+        background-color: var(--text-dark);
+        padding: 4rem 1rem;
+        color: white;
+      }
+
+      footer .font-\[\'Pacifico\'\] {
+        font-size: 1.5rem;
+        color: white;
+        font-weight: bold;
+        margin-bottom: 1rem;
+      }
+
+      footer p {
+        color: #9ca3af;
+        margin-bottom: 1.5rem;
+      }
+
+      footer h4 {
+        font-size: 1.125rem;
+        font-weight: 600;
+        margin-bottom: 1rem;
+        color: white;
+      }
+
+      footer ul li a {
+        color: #9ca3af;
+        transition: color 0.3s ease, padding-left 0.3s ease;
+        display: block;
+        padding: 0.25rem 0;
+      }
+
+      footer ul li a:hover {
+        color: var(--secondary);
+        padding-left: 0.5rem;
+      }
+
+      footer .flex.space-x-4 > a {
+        width: 2.5rem;
+        height: 2.5rem;
+        background-color: #374151;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.3s ease;
+      }
+
+      footer .flex.space-x-4 > a:hover {
+        background-color: var(--secondary);
+        transform: scale(1.1);
+      }
+
+      footer .border-t {
+        border-color: #374151;
+        padding-top: 1.5rem;
+        margin-top: 1.5rem;
+        text-align: center;
+      }
+
+      footer .border-t p {
+        color: #9ca3af;
+        font-size: 0.875rem;
+      }
+
+      footer .border-t a {
+        color: var(--secondary);
+        transition: color 0.3s ease;
+      }
+
+      footer .border-t a:hover {
+        color: white;
+        text-decoration: underline;
+      }
+
+      /* WhatsApp Flotante - Diseño premium */
+      .fixed.bottom-6.right-6 {
+        bottom: 24px;
+        right: 24px;
+        width: 60px;
+        height: 60px;
+        background: linear-gradient(135deg, var(--secondary), #d97706);
+        border-radius: 50%;
+        box-shadow: 0 4px 12px rgba(234, 166, 57, 0.4);
+        transition: all 0.3s ease;
+        z-index: 9999;
+      }
+
+      .fixed.bottom-6.right-6:hover {
+        transform: scale(1.1) rotate(10deg);
+        box-shadow: 0 6px 16px rgba(234, 166, 57, 0.6);
+      }
+
+      .fixed.bottom-6.right-6 i {
+        color: white;
+        font-size: 1.5rem;
+      }
+
+      /* Responsive Design - Para pantallas pequeñas */
+      @media (max-width: 768px) {
+        header nav {
+          padding: 0.75rem 1rem;
+        }
+
+        header .flex > div:first-child {
+          font-size: 1.25rem;
+        }
+
+        section.relative.h-screen .relative.z-10 h1 {
+          font-size: 2rem;
+        }
+
+        section.relative.h-screen .relative.z-10 p {
+          font-size: 1rem;
+        }
+
+        .grid.md\:grid-cols-2.lg\:grid-cols-4.gap-6 > div {
+          padding: 1rem;
+        }
+
+        .py-20.bg-gradient-to-r.from-primary.to-blue-600 .counter {
+          font-size: 2.5rem;
+        }
+
+        .py-20.bg-primary h2 {
+          font-size: 2rem;
+        }
+
+        .py-20.bg-primary p {
+          font-size: 1rem;
+        }
+
+        footer {
+          padding: 2rem 1rem;
+        }
+
+        footer .font-\[\'Pacifico\'\] {
+          font-size: 1.25rem;
+        }
+      }
+    </style>
+  </head>
+  <body class="bg-white">
+    <!-- Progress Bar -->
+    <div class="progress-bar"></div>
+
+    <!-- Header -->
+    <header class="bg-white shadow-sm fixed w-full top-0 z-50">
+      <nav class="px-6 py-4">
+        <div class="flex items-center justify-between max-w-7xl mx-auto">
+          <div class="font-['Pacifico'] text-2xl text-primary">
+            <i class="fas fa-building mr-2"></i>Broadway Commissary
+          </div>
+          <div class="hidden md:flex items-center space-x-8">
+            <a
+              href="index.html"
+              class="text-gray-700 hover:text-primary transition-colors font-medium"
+              >Home</a
+            >
+            <a
+              href="about.html"
+              class="text-gray-700 hover:text-primary transition-colors font-medium"
+              >About Us</a
+            >
+            <a
+              href="services.html"
+              class="text-gray-700 hover:text-primary transition-colors font-medium"
+              >Services</a
+            >
+            <a
+              href="licensing.html"
+              class="text-gray-700 hover:text-primary transition-colors font-medium"
+              >Licensing</a
+            >
+            <a
+              href="contact.html"
+              class="text-gray-700 hover:text-primary transition-colors font-medium"
+              >Contact</a
+            >
+          </div>
+          <a
+            href="contact.html"
+            class="bg-primary text-white px-6 py-2 rounded-lg hover:bg-blue-600 transition-colors whitespace-nowrap font-medium"
+          >
+            Get Free Consultation
+          </a>
+          <button class="md:hidden w-8 h-8 flex items-center justify-center">
+            <i class="ri-menu-line text-xl"></i>
+          </button>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section
+      class="relative h-screen hero-bg flex items-center justify-center pt-16"
+    >
+      <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+      <div class="relative z-10 text-center text-white max-w-4xl mx-auto px-6">
+        <h1 class="text-5xl md:text-6xl font-bold mb-6">
+          Empower Your Business Today
+        </h1>
+        <p class="text-xl md:text-2xl mb-8 opacity-90">
+          Complete Florida Licensing & Business Services with Mizrah Sharp
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a
+            href="services.html"
+            class="bg-primary text-white px-8 py-4 rounded-lg text-lg hover:bg-blue-600 transition-colors whitespace-nowrap font-medium"
+          >
+            Explore Services
+          </a>
+          <a
+            href="contact.html"
+            class="bg-secondary text-white px-8 py-4 rounded-lg text-lg hover:bg-yellow-600 transition-colors whitespace-nowrap font-medium"
+          >
+            Get Started
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Quick Info Section -->
+    <section class="py-20 bg-gray-50">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="grid md:grid-cols-3 gap-8">
+          <div class="bg-white p-8 rounded-xl shadow-lg text-center">
+            <div
+              class="w-16 h-16 flex items-center justify-center bg-primary bg-opacity-10 rounded-xl mb-6 mx-auto"
+            >
+              <i class="fas fa-user-tie text-2xl text-primary"></i>
+            </div>
+            <h3 class="text-2xl font-bold text-gray-900 mb-4">
+              Expert Guidance
+            </h3>
+            <p class="text-gray-600">
+              Work with Mizrah Sharp, your trusted licensing consultant with
+              years of Florida expertise.
+            </p>
+          </div>
+          <div class="bg-white p-8 rounded-xl shadow-lg text-center">
+            <div
+              class="w-16 h-16 flex items-center justify-center bg-primary bg-opacity-10 rounded-xl mb-6 mx-auto"
+            >
+              <i class="fas fa-cogs text-2xl text-primary"></i>
+            </div>
+            <h3 class="text-2xl font-bold text-gray-900 mb-4">
+              Complete Solutions
+            </h3>
+            <p class="text-gray-600">
+              From commissary kitchen access to full business formation and
+              licensing support.
+            </p>
+          </div>
+          <div class="bg-white p-8 rounded-xl shadow-lg text-center">
+            <div
+              class="w-16 h-16 flex items-center justify-center bg-primary bg-opacity-10 rounded-xl mb-6 mx-auto"
+            >
+              <i class="fas fa-bolt text-2xl text-primary"></i>
+            </div>
+            <h3 class="text-2xl font-bold text-gray-900 mb-4">
+              Fast & Efficient
+            </h3>
+            <p class="text-gray-600">
+              Streamlined processes to get your business licensed and
+              operational quickly.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-white">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl font-bold text-gray-900 mb-4">Our Services</h2>
+          <p class="text-xl text-gray-600">
+            Comprehensive solutions for your Florida business
+          </p>
+        </div>
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div
+            class="bg-white p-6 rounded-xl shadow-lg border border-gray-100 text-center"
+          >
+            <i class="fas fa-utensils text-3xl text-primary mb-4"></i>
+            <h4 class="text-xl font-bold text-gray-900 mb-3">
+              Catering & Events
+            </h4>
+            <p class="text-gray-600">
+              Complete catering services for events and celebrations
+            </p>
+          </div>
+          <div
+            class="bg-white p-6 rounded-xl shadow-lg border border-gray-100 text-center"
+          >
+            <i class="fas fa-home text-3xl text-primary mb-4"></i>
+            <h4 class="text-xl font-bold text-gray-900 mb-3">
+              Commissary Kitchen
+            </h4>
+            <p class="text-gray-600">
+              Licensed commercial kitchen access for food preparation
+            </p>
+          </div>
+          <div
+            class="bg-white p-6 rounded-xl shadow-lg border border-gray-100 text-center"
+          >
+            <i class="fas fa-file-alt text-3xl text-primary mb-4"></i>
+            <h4 class="text-xl font-bold text-gray-900 mb-3">
+              Business Licensing
+            </h4>
+            <p class="text-gray-600">
+              Complete business license and registration support
+            </p>
+          </div>
+          <div
+            class="bg-white p-6 rounded-xl shadow-lg border border-gray-100 text-center"
+          >
+            <i class="fas fa-truck text-3xl text-primary mb-4"></i>
+            <h4 class="text-xl font-bold text-gray-900 mb-3">
+              Food Truck Rental
+            </h4>
+            <p class="text-gray-600">
+              Fully equipped and licensed food trucks available
+            </p>
+          </div>
+        </div>
+        <div class="text-center mt-12">
+          <a
+            href="services.html"
+            class="bg-primary text-white px-8 py-4 rounded-lg hover:bg-blue-600 transition-colors font-medium"
+          >
+            View All Services
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="py-20 bg-gradient-to-r from-primary to-blue-600">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="grid md:grid-cols-4 gap-8 text-center text-white">
+          <div>
+            <div class="counter text-5xl font-bold mb-2" data-target="50">
+              0
+            </div>
+            <p class="text-lg opacity-90">Businesses Licensed</p>
+          </div>
+          <div>
+            <div class="counter text-5xl font-bold mb-2" data-target="100">
+              100
+            </div>
+            <p class="text-lg opacity-90">Success Rate</p>
+          </div>
+          <div>
+            <div class="counter text-5xl font-bold mb-2" data-target="24">
+              0
+            </div>
+            <p class="text-lg opacity-90">Hour Response Time</p>
+          </div>
+          <div>
+            <div class="counter text-5xl font-bold mb-2" data-target="10">
+              0
+            </div>
+            <p class="text-lg opacity-90">Years Experience</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="py-20 bg-gray-50">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl font-bold text-gray-900 mb-4">Our Experience</h2>
+          <p class="text-xl text-gray-600">
+            Professional services for Florida businesses
+          </p>
+        </div>
+        <div class="grid md:grid-cols-3 gap-6">
+          <div class="gallery-item">
+            <img
+              src="data:image/jpeg;base64,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"
+              alt="Catering Services"
+              class="w-full h-64 object-cover"
+            />
+            <div class="overlay">
+              <i class="ri-eye-line text-white text-3xl"></i>
+            </div>
+          </div>
+          <div class="gallery-item">
+            <img
+              src="https://www.foodnhotelasia.com/wp-content/uploads/2023/09/Catered-buffet-at-an-event.jpg"
+              alt="Catering Services"
+              class="w-full h-64 object-cover"
+            />
+            <div class="overlay">
+              <i class="ri-eye-line text-white text-3xl"></i>
+            </div>
+          </div>
+          <div class="gallery-item">
+            <img
+              src="https://www.omb11.com/franquias/2/6323036/editor-html/5567987.jpg"
+              alt="Catering Services"
+              class="w-full h-64 object-cover"
+            />
+            <div class="overlay">
+              <i class="ri-eye-line text-white text-3xl"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 bg-primary">
+      <div class="max-w-4xl mx-auto text-center px-6">
+        <h2 class="text-4xl font-bold text-white mb-6">
+          Ready to Start Your Business Journey?
+        </h2>
+        <p class="text-xl text-white opacity-90 mb-8">
+          Contact us today for a free consultation and let us handle your
+          licensing needs.
+        </p>
+        <a
+          href="contact.html"
+          class="bg-white text-primary px-8 py-4 rounded-lg text-lg hover:bg-gray-100 transition-colors whitespace-nowrap font-medium"
+        >
+          Get Free Consultation
+        </a>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-16">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="grid md:grid-cols-4 gap-8">
+          <div>
+            <div class="font-['Pacifico'] text-2xl text-white mb-6">
+              <i class="fas fa-building mr-2"></i>Broadway Commissary
+            </div>
+            <p class="text-gray-300 mb-6">
+              Your trusted partner in Florida business licensing and commissary
+              services.
+            </p>
+            <div class="flex space-x-4">
+              <a
+                href="#"
+                class="w-10 h-10 flex items-center justify-center bg-gray-800 rounded-full hover:bg-secondary transition-colors"
+              >
+                <i class="ri-facebook-fill"></i>
+              </a>
+              <a
+                href="#"
+                class="w-10 h-10 flex items-center justify-center bg-gray-800 rounded-full hover:bg-secondary transition-colors"
+              >
+                <i class="ri-instagram-line"></i>
+              </a>
+              <a
+                href="#"
+                class="w-10 h-10 flex items-center justify-center bg-gray-800 rounded-full hover:bg-secondary transition-colors"
+              >
+                <i class="ri-linkedin-fill"></i>
+              </a>
+            </div>
+          </div>
+          <div>
+            <h4 class="text-lg font-bold mb-6">Quick Links</h4>
+            <ul class="space-y-3">
+              <li>
+                <a
+                  href="index.html"
+                  class="text-gray-300 hover:text-secondary transition-colors"
+                  >Home</a
+                >
+              </li>
+              <li>
+                <a
+                  href="about.html"
+                  class="text-gray-300 hover:text-secondary transition-colors"
+                  >About Us</a
+                >
+              </li>
+              <li>
+                <a
+                  href="services.html"
+                  class="text-gray-300 hover:text-secondary transition-colors"
+                  >Services</a
+                >
+              </li>
+              <li>
+                <a
+                  href="licensing.html"
+                  class="text-gray-300 hover:text-secondary transition-colors"
+                  >Licensing</a
+                >
+              </li>
+              <li>
+                <a
+                  href="contact.html"
+                  class="text-gray-300 hover:text-secondary transition-colors"
+                  >Contact</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="text-lg font-bold mb-6">Services</h4>
+            <ul class="space-y-3">
+              <li>
+                <a
+                  href="services.html"
+                  class="text-gray-300 hover:text-secondary transition-colors"
+                  >Business Licensing</a
+                >
+              </li>
+              <li>
+                <a
+                  href="services.html"
+                  class="text-gray-300 hover:text-secondary transition-colors"
+                  >Commissary Kitchen</a
+                >
+              </li>
+              <li>
+                <a
+                  href="services.html"
+                  class="text-gray-300 hover:text-secondary transition-colors"
+                  >Catering Services</a
+                >
+              </li>
+              <li>
+                <a
+                  href="services.html"
+                  class="text-gray-300 hover:text-secondary transition-colors"
+                  >Food Truck Rental</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="text-lg font-bold mb-6">Contact Information</h4>
+            <div class="space-y-4">
+              <div class="flex items-center">
+                <i class="ri-phone-line mr-3 text-secondary"></i>
+                <span class="text-gray-300">(123) 456-7890</span>
+              </div>
+              <div class="flex items-center">
+                <i class="ri-mail-line mr-3 text-secondary"></i>
+                <span class="text-gray-300">info@broadwaycommissary.com</span>
+              </div>
+              <div class="flex items-center">
+                <i class="ri-globe-line mr-3 text-secondary"></i>
+                <span class="text-gray-300">dreamsgonemobile.com</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400"
+        >
+          <p>
+            © 2025 Broadway Commissary. All rights reserved. |
+            <a href="#" class="hover:text-secondary">Privacy Policy</a> |
+            <a href="#" class="hover:text-secondary">Terms of Service</a>
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- WhatsApp Flotante -->
+    <a
+      href="https://wa.me/1234567890"
+      class="fixed bottom-6 right-6 w-14 h-14 flex items-center justify-center bg-secondary rounded-full shadow-lg hover:bg-yellow-600 transition-colors z-50"
+    >
+      <i class="ri-whatsapp-line text-white text-2xl"></i>
+    </a>
+
+    <script>
+      // Progress Bar
+      document.addEventListener("DOMContentLoaded", function () {
+        const progressBar = document.querySelector(".progress-bar");
+        window.addEventListener("scroll", function () {
+          const winScroll =
+            document.body.scrollTop || document.documentElement.scrollTop;
+          const height =
+            document.documentElement.scrollHeight -
+            document.documentElement.clientHeight;
+          const scrolled = (winScroll / height) * 100;
+          progressBar.style.width = scrolled + "%";
+        });
+
+        // Counter Animation
+        const counters = document.querySelectorAll(".counter");
+        let started = false;
+
+        function startCounter() {
+          counters.forEach((counter) => {
+            const target = parseInt(counter.getAttribute("data-target"));
+            const increment = target / 100;
+            let current = 0;
+
+            const timer = setInterval(() => {
+              current += increment;
+              if (current >= target) {
+                counter.textContent = target;
+                clearInterval(timer);
+              } else {
+                counter.textContent = Math.floor(current);
+              }
+            }, 20);
+          });
+        }
+
+        function checkScroll() {
+          const statsSection = document.querySelector(".bg-gradient-to-r");
+          const rect = statsSection.getBoundingClientRect();
+          if (rect.top <= window.innerHeight && rect.bottom >= 0 && !started) {
+            started = true;
+            startCounter();
+          }
+        }
+
+        window.addEventListener("scroll", checkScroll);
+
+        // Smooth Scroll
+        const links = document.querySelectorAll('a[href^="#"]');
+        links.forEach((link) => {
+          link.addEventListener("click", function (e) {
+            e.preventDefault();
+            const targetId = this.getAttribute("href").substring(1);
+            const targetElement = document.getElementById(targetId);
+            if (targetElement) {
+              const offsetTop = targetElement.offsetTop - 80;
+              window.scrollTo({
+                top: offsetTop,
+                behavior: "smooth",
+              });
+            }
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
