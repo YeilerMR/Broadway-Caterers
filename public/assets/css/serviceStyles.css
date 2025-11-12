@@ -1,0 +1,241 @@
+
+/* Services Hero */
+.services-hero-bg {
+    background-color: #EAA639;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+section.relative.services-hero-bg {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+
+section.relative.services-hero-bg .absolute.inset-0 {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+}
+
+section.relative.services-hero-bg .relative.z-10 h1 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+section.relative.services-hero-bg .relative.z-10 p {
+    font-size: 1.25rem;
+    opacity: 0.9;
+    color: white;
+}
+
+/* Service Cards (General) */
+.bg-white.rounded-2xl.shadow-lg.border.border-gray-100.overflow-hidden {
+    background-color: var(--bg-white);
+    border-radius: 1.5rem;
+    box-shadow: 0 4px 20px var(--shadow);
+    border: 1px solid rgba(229, 231, 235, 0.5);
+    transition: all 0.3s ease;
+    padding: 0;
+}
+
+.bg-white.rounded-2xl.shadow-lg.border.border-gray-100.overflow-hidden:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+    border-color: rgba(178, 57, 234, 0.2);
+}
+
+.bg-white.rounded-2xl.shadow-lg.border.border-gray-100.overflow-hidden .p-8 {
+    padding: 2rem;
+}
+
+.bg-white.rounded-2xl.shadow-lg.border.border-gray-100.overflow-hidden .w-16.h-16 {
+    width: 4rem;
+    height: 4rem;
+    background-color: rgba(57, 125, 234, 0.1);
+    border-radius: 1rem;
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease;
+}
+
+.bg-white.rounded-2xl.shadow-lg.border.border-gray-100.overflow-hidden:hover .w-16.h-16 {
+    background-color: rgba(57, 125, 234, 0.2);
+}
+
+.bg-white.rounded-2xl.shadow-lg.border.border-gray-100.overflow-hidden i {
+    color: var(--primary);
+    font-size: 1.5rem;
+}
+
+.bg-white.rounded-2xl.shadow-lg.border.border-gray-100.overflow-hidden h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: var(--text-dark);
+    transition: color 0.3s ease;
+}
+
+.bg-white.rounded-2xl.shadow-lg.border.border-gray-100.overflow-hidden:hover h3 {
+    color: var(--text-light);
+}
+
+.bg-white.rounded-2xl.shadow-lg.border.border-gray-100.overflow-hidden p {
+    color: var(--text-dark);
+    margin-bottom: 1.5rem;
+    font-size: 1rem;
+}
+
+.bg-white.rounded-2xl.shadow-lg.border.border-gray-100.overflow-hidden ul.space-y-3 li {
+    display: flex;
+    align-items: center;
+    color: var(--text-dark);
+    font-size: 0.95rem;
+}
+
+.bg-white.rounded-2xl.shadow-lg.border.border-gray-100.overflow-hidden ul.space-y-3 li i {
+    width: 1.25rem;
+    height: 1.25rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bg-white.rounded-2xl.shadow-lg.border.border-gray-100.overflow-hidden ul.space-y-3 li.text-gray-500 i {
+    color: #9ca3af;
+}
+
+/* Service Packages Section */
+.py-20.bg-gray-50 .bg-white.rounded-2xl.shadow-lg.border.border-gray-100.overflow-hidden {
+    background-color: var(--bg-white);
+    border-radius: 1.5rem;
+    box-shadow: 0 10px 30px var(--shadow);
+    border: 1px solid rgba(229, 231, 235, 0.5);
+    transition: all 0.3s ease;
+}
+
+.py-20.bg-gray-50 .bg-white.rounded-2xl.shadow-lg.border.border-gray-100.overflow-hidden:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.12);
+}
+
+/* Professional Package - Most Popular */
+.py-20.bg-gray-50 .bg-white.rounded-2xl.shadow-2xl.border-2.border-primary.relative.overflow-hidden {
+    background-color: var(--bg-white);
+    border: 2px solid var(--primary);
+    box-shadow: 0 20px 40px rgba(57, 125, 234, 0.15);
+    transition: all 0.4s ease;
+}
+
+.py-20.bg-gray-50 .bg-white.rounded-2xl.shadow-2xl.border-2.border-primary.relative.overflow-hidden:hover {
+    transform: scale(1.03) translateY(-8px);
+    box-shadow: 0 24px 50px rgba(57, 125, 234, 0.25);
+}
+
+.py-20.bg-gray-50 .bg-primary.text-white.p-8.text-center {
+    background-color: var(--primary);
+    padding: 2rem;
+    color: white;
+}
+
+.py-20.bg-gray-50 .bg-primary.text-white.p-8.text-center h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    transition: all 0.3s ease;
+}
+.py-20.bg-gray-50 .bg-primary.text-white.p-8.text-center h3:hover{
+    color: var(--text-light);
+}
+
+
+.py-20.bg-gray-50 .bg-primary.text-white.p-8.text-center .text-4xl {
+    font-weight: 800;
+    margin-bottom: 0.5rem;
+}
+
+.py-20.bg-gray-50 .bg-primary.text-white.p-8.text-center p {
+    opacity: 0.9;
+    font-size: 1rem;
+    color: var(--bg-white) !important;
+}
+
+.py-20.bg-gray-50 .absolute.top-4.right-4 {
+    background-color: var(--secondary);
+    color: white;
+    font-weight: 600;
+    font-size: 0.85rem;
+    border-radius: 9999px;
+    padding: 0.25rem 0.75rem;
+}
+
+.py-20.bg-gray-50 .p-8 ul.space-y-4 li {
+    display: flex;
+    align-items: center;
+    font-size: 0.95rem;
+}
+
+.py-20.bg-gray-50 .p-8 ul.space-y-4 li i {
+    width: 1.25rem;
+    height: 1.25rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.py-20.bg-gray-50 .p-8 a.block.w-full.bg-primary.text-white.text-center.py-3.rounded-lg {
+    background-color: var(--primary) !important;
+    color: white !important;
+    padding: 0.75rem;
+    border-radius: 0.75rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.py-20.bg-gray-50 .p-8 a.block.w-full.bg-primary.text-white.text-center.py-3.rounded-lg:hover {
+    background-color: #2563eb !important;
+    transform: scale(1.03);
+    box-shadow: 0 4px 12px rgba(57, 125, 234, 0.3);
+}
+
+/* CTA Section */
+.py-20.bg-primary {
+    background-color: var(--primary);
+    padding: 4rem 1rem;
+    text-align: center;
+}
+
+.py-20.bg-primary h2 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 1.5rem;
+    color: white;
+}
+
+.py-20.bg-primary p {
+    font-size: 1.25rem;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 2rem;
+}
+
+.py-20.bg-primary a {
+    background-color: white !important;
+    color: var(--primary) !important;
+    padding: 1rem 2rem;
+    font-size: 1.125rem;
+    font-weight: 600;
+    border-radius: 0.75rem;
+    transition: all 0.3s ease;
+}
+
+.py-20.bg-primary a:hover {
+    background-color: #f3f4f6 !important;
+    transform: scale(1.05);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+}

@@ -1,0 +1,232 @@
+:root {
+  --primary: #397dea;
+  --secondary: #eaa639;
+  --text-dark: #303030;
+  --text-light: #ff8821;
+  --bg-light: #f9fafb;
+  --bg-white: #ffffff;
+  --shadow: rgba(0, 0, 0, 0.05);
+}
+
+/* Reset básico y tipografía */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Libre Caslon Text", serif;
+  line-height: 1.6;
+  color: var(--text-dark);
+  background-color: var(--bg-white);
+}
+
+/* Progress Bar - Mejorado */
+.progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 4px;
+  background: linear-gradient(90deg, var(--primary), var(--secondary));
+  z-index: 9999;
+  transition: width 0.3s ease-out, background 0.3s ease;
+  box-shadow: 0 2px 4px var(--shadow);
+}
+
+/* Header - Más elegante y con hover */
+header {
+  background-color: var(--bg-white);
+  box-shadow: 0 2px 10px var(--shadow);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+}
+
+header nav {
+  padding: 1rem 1.5rem;
+}
+
+header .flex > div:first-child {
+  font-size: 1.5rem;
+  color: var(--primary);
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+header .flex > div:first-child:hover {
+  color: var(--secondary);
+}
+
+header a {
+  color: var(--text-dark);
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+header a:hover,
+header a:focus {
+  color: var(--primary);
+  background-color: rgba(57, 125, 234, 0.1);
+  transform: translateY(-2px);
+}
+
+header .bg-primary {
+  background-color: var(--primary) !important;
+  color: white !important;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.75rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+header .bg-primary:hover {
+  background-color: #2563eb !important;
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(57, 125, 234, 0.3);
+}
+
+/* Footer - Moderno y con hover */
+footer {
+  background-color: var(--text-dark);
+  padding: 4rem 1rem;
+  color: white;
+}
+
+footer .font-\[\'Pacifico\'\] {
+  font-size: 1.5rem;
+  color: white;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+footer p {
+  color: #9ca3af;
+  margin-bottom: 1.5rem;
+}
+
+footer h4 {
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: white;
+}
+
+footer ul li a {
+  color: #9ca3af;
+  transition: color 0.3s ease, padding-left 0.3s ease;
+  display: block;
+  padding: 0.25rem 0;
+}
+
+footer ul li a:hover {
+  color: var(--secondary);
+  padding-left: 0.5rem;
+}
+
+footer .flex.space-x-4 > a {
+  width: 2.5rem;
+  height: 2.5rem;
+  background-color: #374151;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+footer .flex.space-x-4 > a:hover {
+  background-color: var(--secondary);
+  transform: scale(1.1);
+}
+
+footer .border-t {
+  border-color: #374151;
+  padding-top: 1.5rem;
+  margin-top: 1.5rem;
+  text-align: center;
+}
+
+footer .border-t p {
+  color: #9ca3af;
+  font-size: 0.875rem;
+}
+
+footer .border-t a {
+  color: var(--secondary);
+  transition: color 0.3s ease;
+}
+
+footer .border-t a:hover {
+  color: white;
+  text-decoration: underline;
+}
+
+/* WhatsApp Flotante - Diseño premium */
+.fixed.bottom-6.right-6 {
+  bottom: 24px;
+  right: 24px;
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, var(--secondary), #d97706);
+  border-radius: 50%;
+  box-shadow: 0 4px 12px rgba(234, 166, 57, 0.4);
+  transition: all 0.3s ease;
+  z-index: 9999;
+}
+
+.fixed.bottom-6.right-6:hover {
+  transform: scale(1.1) rotate(10deg);
+  box-shadow: 0 6px 16px rgba(234, 166, 57, 0.6);
+}
+
+.fixed.bottom-6.right-6 i {
+  color: white;
+  font-size: 1.5rem;
+}
+
+/* Responsive Design - Para pantallas pequeñas */
+@media (max-width: 768px) {
+  header nav {
+    padding: 0.75rem 1rem;
+  }
+
+  header .flex > div:first-child {
+    font-size: 1.25rem;
+  }
+
+  section.relative.h-screen .relative.z-10 h1 {
+    font-size: 2rem;
+  }
+
+  section.relative.h-screen .relative.z-10 p {
+    font-size: 1rem;
+  }
+
+  .grid.md\:grid-cols-2.lg\:grid-cols-4.gap-6 > div {
+    padding: 1rem;
+  }
+
+  .py-20.bg-gradient-to-r.from-primary.to-blue-600 .counter {
+    font-size: 2.5rem;
+  }
+
+  .py-20.bg-primary h2 {
+    font-size: 2rem;
+  }
+
+  .py-20.bg-primary p {
+    font-size: 1rem;
+  }
+
+  footer {
+    padding: 2rem 1rem;
+  }
+
+  footer .font-\[\'Pacifico\'\] {
+    font-size: 1.25rem;
+  }
+}
