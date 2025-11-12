@@ -1,0 +1,506 @@
+:root {
+        --primary: #397dea;
+        --secondary: #eaa639;
+        --text-dark: #1f2937;
+        --text-light: #6b7280;
+        --bg-light: #f9fafb;
+        --bg-white: #ffffff;
+        --shadow: rgba(0, 0, 0, 0.05);
+      }
+
+      /* Reset básico y tipografía */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: 'Libre Caslon Text', serif;
+        line-height: 1.6;
+        color: var(--text-dark);
+        background-color: var(--bg-white);
+      }
+
+      /* Progress Bar - Mejorado */
+      .progress-bar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 0%;
+        height: 4px;
+        background: linear-gradient(90deg, var(--primary), var(--secondary));
+        z-index: 9999;
+        transition: width 0.3s ease-out, background 0.3s ease;
+        box-shadow: 0 2px 4px var(--shadow);
+      }
+
+      /* Header - Más elegante y con hover */
+      header {
+        background-color: var(--bg-white);
+        box-shadow: 0 2px 10px var(--shadow);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        transition: all 0.3s ease;
+      }
+
+      header nav {
+        padding: 1rem 1.5rem;
+      }
+
+      header .flex > div:first-child {
+        font-size: 1.5rem;
+        color: var(--primary);
+        font-weight: bold;
+        transition: color 0.3s ease;
+      }
+
+      header .flex > div:first-child:hover {
+        color: var(--secondary);
+      }
+
+      header a {
+        color: var(--text-dark);
+        font-weight: 500;
+        padding: 0.5rem 1rem;
+        border-radius: 0.5rem;
+        transition: all 0.3s ease;
+      }
+
+      header a:hover,
+      header a:focus {
+        color: var(--primary);
+        background-color: rgba(57, 125, 234, 0.1);
+        transform: translateY(-2px);
+      }
+
+      header .bg-primary {
+        background-color: var(--primary) !important;
+        color: white !important;
+        padding: 0.75rem 1.5rem;
+        border-radius: 0.75rem;
+        font-weight: 600;
+        transition: all 0.3s ease;
+      }
+
+      header .bg-primary:hover {
+        background-color: #2563eb !important;
+        transform: scale(1.05);
+        box-shadow: 0 4px 12px rgba(57, 125, 234, 0.3);
+      }
+
+      /* Hero Section - Más impactante */
+      .hero-bg {
+        background-image: url("https://readdy.ai/api/search-image?query=elegant%20catering%20event%20setup%20with%20professional%20licensing%20documents%20modern%20business%20atmosphere%20warm%20lighting%20sophisticated%20dining%20room%20setup&width=1920&height=1080&seq=hero1&orientation=landscape");
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+      }
+
+      section.relative.h-screen {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding-top: 4rem;
+      }
+
+      section.relative.h-screen .absolute.inset-0 {
+        background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+      }
+
+      section.relative.h-screen .relative.z-10 h1 {
+        font-size: 2.5rem;
+        font-weight: 800;
+        letter-spacing: -0.02em;
+        margin-bottom: 1rem;
+        color: white;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        animation: fadeInUp 1s ease-out;
+      }
+
+      section.relative.h-screen .relative.z-10 p {
+        font-size: 1.25rem;
+        margin-bottom: 2rem;
+        opacity: 0.9;
+        animation: fadeInUp 1s ease-out 0.2s both;
+      }
+
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      section.relative.h-screen .relative.z-10 .flex > a {
+        padding: 1rem 1.5rem;
+        font-size: 1.125rem;
+        font-weight: 600;
+        border-radius: 0.75rem;
+        transition: all 0.3s ease;
+        margin: 0.5rem;
+        min-width: 180px;
+      }
+
+      section.relative.h-screen .relative.z-10 .flex > a:first-child {
+        background-color: var(--primary);
+        color: white;
+      }
+
+      section.relative.h-screen .relative.z-10 .flex > a:first-child:hover {
+        background-color: #2563eb;
+        transform: scale(1.05);
+        box-shadow: 0 4px 12px rgba(57, 125, 234, 0.3);
+      }
+
+      section.relative.h-screen .relative.z-10 .flex > a:last-child {
+        background-color: var(--secondary);
+        color: white;
+      }
+
+      section.relative.h-screen .relative.z-10 .flex > a:last-child:hover {
+        background-color: #d97706;
+        transform: scale(1.05);
+        box-shadow: 0 4px 12px rgba(234, 166, 57, 0.3);
+      }
+
+      /* Quick Info & Services Cards - Hover y sombras */
+      .bg-white.p-8.rounded-xl.shadow-lg {
+        background-color: var(--bg-white);
+        border-radius: 1rem;
+        box-shadow: 0 4px 20px var(--shadow);
+        transition: all 0.3s ease;
+        padding: 2rem;
+        border: 1px solid rgba(229, 231, 235, 0.5);
+      }
+
+      .bg-white.p-8.rounded-xl.shadow-lg:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+        border-color: rgba(57, 125, 234, 0.2);
+      }
+
+      .bg-white.p-8.rounded-xl.shadow-lg .w-16.h-16 {
+        width: 4rem;
+        height: 4rem;
+        background-color: rgba(57, 125, 234, 0.1);
+        border-radius: 1rem;
+        margin-bottom: 1.5rem;
+        transition: background-color 0.3s ease;
+      }
+
+      .bg-white.p-8.rounded-xl.shadow-lg .w-16.h-16:hover {
+        background-color: rgba(57, 125, 234, 0.2);
+      }
+
+      .bg-white.p-8.rounded-xl.shadow-lg h3 {
+        font-size: 1.5rem;
+        font-weight: 700;
+        margin-bottom: 0.75rem;
+        color: var(--text-dark);
+        transition: color 0.3s ease;
+      }
+
+      .bg-white.p-8.rounded-xl.shadow-lg h3:hover {
+        color: var(--primary);
+      }
+
+      /* Services Grid Cards - Con hover y borde sutil */
+      .grid.md\:grid-cols-2.lg\:grid-cols-4.gap-6 > div {
+        background-color: var(--bg-white);
+        border-radius: 1rem;
+        box-shadow: 0 4px 16px var(--shadow);
+        transition: all 0.3s ease;
+        padding: 1.5rem;
+        border: 1px solid rgba(229, 231, 235, 0.5);
+        text-align: center;
+      }
+
+      .grid.md\:grid-cols-2.lg\:grid-cols-4.gap-6 > div:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+        border-color: rgba(57, 125, 234, 0.3);
+      }
+
+      .grid.md\:grid-cols-2.lg\:grid-cols-4.gap-6 > div i {
+        font-size: 2.5rem;
+        color: var(--primary);
+        margin-bottom: 1rem;
+        transition: color 0.3s ease;
+      }
+
+      .grid.md\:grid-cols-2.lg\:grid-cols-4.gap-6 > div:hover i {
+        color: var(--secondary);
+      }
+
+      .grid.md\:grid-cols-2.lg\:grid-cols-4.gap-6 > div h4 {
+        font-size: 1.25rem;
+        font-weight: 700;
+        margin-bottom: 0.5rem;
+        color: var(--text-dark);
+        transition: color 0.3s ease;
+      }
+
+      .grid.md\:grid-cols-2.lg\:grid-cols-4.gap-6 > div:hover h4 {
+        color: var(--primary);
+      }
+
+      /* Stats Section - Gradiente vibrante */
+      .py-20.bg-gradient-to-r.from-primary.to-blue-600 {
+        background: linear-gradient(90deg, var(--primary), #2563eb);
+        color: white;
+        padding: 4rem 1rem;
+      }
+
+      .py-20.bg-gradient-to-r.from-primary.to-blue-600 .counter {
+        font-size: 3rem;
+        font-weight: 800;
+        margin-bottom: 0.5rem;
+        animation: countUp 1s ease-out;
+      }
+
+      @keyframes countUp {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      /* Gallery Section - Hover con zoom y overlay */
+      .gallery-item {
+        position: relative;
+        overflow: hidden;
+        border-radius: 1rem;
+        cursor: pointer;
+        transition: transform 0.3s ease;
+      }
+
+      .gallery-item:hover {
+        transform: scale(1.03);
+      }
+
+      .gallery-item img {
+        width: 100%;
+        height: 250px;
+        object-fit: cover;
+        transition: transform 0.5s ease;
+      }
+
+      .gallery-item:hover img {
+        transform: scale(1.1);
+      }
+
+      .gallery-item .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(57, 125, 234, 0.8);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+      }
+
+      .gallery-item:hover .overlay {
+        opacity: 1;
+      }
+
+      .gallery-item .overlay i {
+        color: white;
+        font-size: 2rem;
+        transition: transform 0.3s ease;
+      }
+
+      .gallery-item:hover .overlay i {
+        transform: scale(1.2);
+      }
+
+      /* CTA Section - Botón destacado */
+      .py-20.bg-primary {
+        background-color: var(--primary);
+        padding: 4rem 1rem;
+        text-align: center;
+      }
+
+      .py-20.bg-primary h2 {
+        font-size: 2.5rem;
+        font-weight: 800;
+        margin-bottom: 1rem;
+        color: white;
+      }
+
+      .py-20.bg-primary p {
+        font-size: 1.25rem;
+        margin-bottom: 2rem;
+        color: rgba(255, 255, 255, 0.9);
+      }
+
+      .py-20.bg-primary .bg-white {
+        background-color: white !important;
+        color: var(--primary) !important;
+        padding: 1rem 2rem;
+        font-size: 1.125rem;
+        font-weight: 600;
+        border-radius: 0.75rem;
+        transition: all 0.3s ease;
+      }
+
+      .py-20.bg-primary .bg-white:hover {
+        background-color: #f3f4f6 !important;
+        transform: scale(1.05);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      }
+
+      /* Footer - Moderno y con hover */
+      footer {
+        background-color: var(--text-dark);
+        padding: 4rem 1rem;
+        color: white;
+      }
+
+      footer .font-\[\'Pacifico\'\] {
+        font-size: 1.5rem;
+        color: white;
+        font-weight: bold;
+        margin-bottom: 1rem;
+      }
+
+      footer p {
+        color: #9ca3af;
+        margin-bottom: 1.5rem;
+      }
+
+      footer h4 {
+        font-size: 1.125rem;
+        font-weight: 600;
+        margin-bottom: 1rem;
+        color: white;
+      }
+
+      footer ul li a {
+        color: #9ca3af;
+        transition: color 0.3s ease, padding-left 0.3s ease;
+        display: block;
+        padding: 0.25rem 0;
+      }
+
+      footer ul li a:hover {
+        color: var(--secondary);
+        padding-left: 0.5rem;
+      }
+
+      footer .flex.space-x-4 > a {
+        width: 2.5rem;
+        height: 2.5rem;
+        background-color: #374151;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.3s ease;
+      }
+
+      footer .flex.space-x-4 > a:hover {
+        background-color: var(--secondary);
+        transform: scale(1.1);
+      }
+
+      footer .border-t {
+        border-color: #374151;
+        padding-top: 1.5rem;
+        margin-top: 1.5rem;
+        text-align: center;
+      }
+
+      footer .border-t p {
+        color: #9ca3af;
+        font-size: 0.875rem;
+      }
+
+      footer .border-t a {
+        color: var(--secondary);
+        transition: color 0.3s ease;
+      }
+
+      footer .border-t a:hover {
+        color: white;
+        text-decoration: underline;
+      }
+
+      /* WhatsApp Flotante - Diseño premium */
+      .fixed.bottom-6.right-6 {
+        bottom: 24px;
+        right: 24px;
+        width: 60px;
+        height: 60px;
+        background: linear-gradient(135deg, var(--secondary), #d97706);
+        border-radius: 50%;
+        box-shadow: 0 4px 12px rgba(234, 166, 57, 0.4);
+        transition: all 0.3s ease;
+        z-index: 9999;
+      }
+
+      .fixed.bottom-6.right-6:hover {
+        transform: scale(1.1) rotate(10deg);
+        box-shadow: 0 6px 16px rgba(234, 166, 57, 0.6);
+      }
+
+      .fixed.bottom-6.right-6 i {
+        color: white;
+        font-size: 1.5rem;
+      }
+
+      /* Responsive Design - Para pantallas pequeñas */
+      @media (max-width: 768px) {
+        header nav {
+          padding: 0.75rem 1rem;
+        }
+
+        header .flex > div:first-child {
+          font-size: 1.25rem;
+        }
+
+        section.relative.h-screen .relative.z-10 h1 {
+          font-size: 2rem;
+        }
+
+        section.relative.h-screen .relative.z-10 p {
+          font-size: 1rem;
+        }
+
+        .grid.md\:grid-cols-2.lg\:grid-cols-4.gap-6 > div {
+          padding: 1rem;
+        }
+
+        .py-20.bg-gradient-to-r.from-primary.to-blue-600 .counter {
+          font-size: 2.5rem;
+        }
+
+        .py-20.bg-primary h2 {
+          font-size: 2rem;
+        }
+
+        .py-20.bg-primary p {
+          font-size: 1rem;
+        }
+
+        footer {
+          padding: 2rem 1rem;
+        }
+
+        footer .font-\[\'Pacifico\'\] {
+          font-size: 1.25rem;
+        }
+      }
