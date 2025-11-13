@@ -330,6 +330,14 @@ form#contactForm .flex.items-center input {
     color: var(--primary);
 }
 
+/* contactStyles.css */
+.field-input.field-error-border {
+  border-color: #ef4444 !important;
+}
+.field-input.field-error-border:focus {
+  border-color: #ef4444 !important;
+  box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.2) !important;
+}
 /* Footer & WhatsApp - Reutilizados */
 footer {
     background-color: var(--text-dark);

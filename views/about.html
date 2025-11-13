@@ -175,34 +175,6 @@
         <i class="ri-whatsapp-line text-white text-2xl"></i>
     </a>
 
-    <script>
-        // Progress Bar
-        document.addEventListener("DOMContentLoaded", function () {
-            const progressBar = document.querySelector(".progress-bar");
-            window.addEventListener("scroll", function () {
-                const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-                const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-                const scrolled = (winScroll / height) * 100;
-                progressBar.style.width = scrolled + "%";
-            });
-
-            // Smooth Scroll for navigation links
-            const links = document.querySelectorAll('a[href^="#"]');
-            links.forEach((link) => {
-                link.addEventListener("click", function (e) {
-                    e.preventDefault();
-                    const targetId = this.getAttribute("href").substring(1);
-                    const targetElement = document.getElementById(targetId);
-                    if (targetElement) {
-                        const offsetTop = targetElement.offsetTop - 80;
-                        window.scrollTo({
-                            top: offsetTop,
-                            behavior: "smooth",
-                        });
-                    }
-                });
-            });
-        });
-    </script>
+    <script src="public/assets/js/main.js"></script>
 </body>
 </html>
