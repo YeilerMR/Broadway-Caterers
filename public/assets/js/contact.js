@@ -123,7 +123,7 @@ function validateForm(form) {
   }
 
   // Validar servicios
-  const services = form.querySelectorAll('input[name="services"]:checked');
+  const services = form.querySelectorAll('input[name="services[]"]:checked');
   if (services.length === 0) {
     const servicesContainer = document.querySelector("div.grid.md\\:grid-cols-2.gap-4");
 
@@ -186,14 +186,17 @@ document.addEventListener("DOMContentLoaded", function () {
       });
 
       // Preparar datos
-      const formData = new FormData(contactForm);
+      const formData= new FormData(contactForm);
+      
       formData.append("g-recaptcha-response", token);
 
       // Enviar al backend
-      const response = await fetch("/Broadway-Caterers/services/contact-submit.php", {
+      
+      const response = await fetch("services/contact-submit.php", {
         method: "POST",
         body: formData,
       });
+      
 
       const data = await response.json();
 

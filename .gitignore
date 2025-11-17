@@ -22,6 +22,6 @@ rad.json
 TestResults.xml
 
 #Variables de entorno
-.env
+.env.local
 assets.txt
 vendor
