@@ -107,13 +107,13 @@
                             <div class="grid md:grid-cols-2 gap-6">
                                 <div>
                                     <label for="name" class="block text-sm font-medium text-gray-700 mb-2">Full Name *</label>
-                                    <input type="text" id="name" name="name" required 
-                                           class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-colors">
+                                    <input type="text" id="name" name="name" 
+    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary transition-colors field-input">
                                 </div>
                                 <div>
                                     <label for="email" class="block text-sm font-medium text-gray-700 mb-2">Email Address *</label>
-                                    <input type="email" id="email" name="email" required 
-                                           class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-colors">
+                                    <input type="email" id="email" name="email"
+                                           class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary transition-colors field-input">
                                 </div>
                             </div>
 
@@ -122,12 +122,12 @@
                                 <div>
                                     <label for="phone" class="block text-sm font-medium text-gray-700 mb-2">Phone Number</label>
                                     <input type="tel" id="phone" name="phone" 
-                                           class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-colors">
+                                           class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary transition-colors field-input">
                                 </div>
                                 <div>
                                     <label for="businessType" class="block text-sm font-medium text-gray-700 mb-2">Business Type</label>
                                     <select id="businessType" name="businessType" 
-                                            class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-colors">
+                                            class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary transition-colors field-input">
                                         <option value="">Select a business type...</option>
                                         <option value="catering">Catering Company</option>
                                         <option value="foodtruck">Food Truck</option>
@@ -143,15 +143,15 @@
                             <!-- Subject -->
                             <div>
                                 <label for="subject" class="block text-sm font-medium text-gray-700 mb-2">Subject *</label>
-                                <input type="text" id="subject" name="subject" required 
-                                       class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-colors">
+                                <input type="text" id="subject" name="subject" 
+                                       class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary transition-colors field-input">
                             </div>
 
                             <!-- Message -->
                             <div>
                                 <label for="message" class="block text-sm font-medium text-gray-700 mb-2">Message *</label>
-                                <textarea id="message" name="message" rows="5" required 
-                                          class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-colors"></textarea>
+                                <textarea id="message" name="message" rows="5"
+                                          class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary transition-colors field-input"></textarea>
                             </div>
 
                             <!-- Services Interested In -->
@@ -267,80 +267,11 @@
     <a href="https://wa.me/1234567890" class="fixed bottom-6 right-6 w-14 h-14 flex items-center justify-center bg-secondary rounded-full shadow-lg hover:bg-yellow-600 transition-colors z-50">
         <i class="ri-whatsapp-line text-white text-2xl"></i>
     </a>
+    
+    <!-- Recaptcha CSS -->
+    <script src="https://www.google.com/recaptcha/api.js?render=6LcoRNwrAAAAAMtKWFfyC5SRwo9Jh8zWAIxvgAmc"></script>
+    <script src="public/assets/js/main.js"></script>
+    <script src="public/assets/js/contact.js"></script>
 
-    <script>
-        // Progress Bar
-        document.addEventListener("DOMContentLoaded", function () {
-            const progressBar = document.querySelector(".progress-bar");
-            window.addEventListener("scroll", function () {
-                const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-                const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-                const scrolled = (winScroll / height) * 100;
-                progressBar.style.width = scrolled + "%";
-            });
-
-            // Contact Form Handling
-            const contactForm = document.getElementById("contactForm");
-            if (contactForm) {
-                contactForm.addEventListener("submit", function (e) {
-                    e.preventDefault();
-                    
-                    // Get form data
-                    const formData = new FormData(contactForm);
-                    const formSummary = {
-                        name: formData.get("name") || "Not provided",
-                        email: formData.get("email") || "Not provided",
-                        phone: formData.get("phone") || "Not provided",
-                        subject: formData.get("subject") || "Not provided",
-                        message: formData.get("message") || "Not provided",
-                        businessType: formData.get("businessType") || "Not specified",
-                        timestamp: new Date().toLocaleString(),
-                    };
-
-                    // Show success message
-                    showAlert("Thank you for your message! Mizrah Sharp will contact you shortly.", "success");
-                    
-                    // Reset form
-                    contactForm.reset();
-                });
-            }
-
-            function showAlert(message, type) {
-                // Create alert element
-                const alertDiv = document.createElement('div');
-                alertDiv.className = `fixed top-20 right-6 bg-${type === 'success' ? 'green' : 'red'}-500 text-white px-6 py-4 rounded-lg shadow-lg z-50 transform transition-transform duration-300`;
-                alertDiv.innerHTML = `
-                    <div class="flex items-center">
-                        <i class="fas fa-${type === 'success' ? 'check' : 'exclamation'}-circle mr-3"></i>
-                        <span>${message}</span>
-                    </div>
-                `;
-                
-                document.body.appendChild(alertDiv);
-                
-                // Remove after 5 seconds
-                setTimeout(() => {
-                    alertDiv.remove();
-                }, 5000);
-            }
-
-            // Smooth Scroll for navigation links
-            const links = document.querySelectorAll('a[href^="#"]');
-            links.forEach((link) => {
-                link.addEventListener("click", function (e) {
-                    e.preventDefault();
-                    const targetId = this.getAttribute("href").substring(1);
-                    const targetElement = document.getElementById(targetId);
-                    if (targetElement) {
-                        const offsetTop = targetElement.offsetTop - 80;
-                        window.scrollTo({
-                            top: offsetTop,
-                            behavior: "smooth",
-                        });
-                    }
-                });
-            });
-        });
-    </script>
 </body>
 </html>
