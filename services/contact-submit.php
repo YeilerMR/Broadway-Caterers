@@ -62,11 +62,16 @@ $subject = sanitize($_POST['subject'] ?? '');
 $message = sanitize($_POST['message'] ?? '');
 $businessType = sanitize($_POST['businessType'] ?? '');
 $services = $_POST['services'] ?? [];
+$findUs = sanitize($_POST['findUs'] ?? '');
 
 // Validar campos obligatorios
 if (empty($name) || empty($email) || empty($subject) || empty($message)) {
 
     echo json_encode(['success' => false, 'message' => 'All required fields must be filled.']);
+    exit;
+}
+if (empty($findUs)) {
+    echo json_encode(['success' => false, 'message' => 'Please select how you found us.']);
     exit;
 }
 
@@ -148,6 +153,10 @@ try {
                   <td style="padding: 8px 0; vertical-align: top;"><strong style="color: #1f2937; display: inline-block; width: 140px;">Services:</strong></td>
                   <td style="color: #1f2937;">' . $servicesFormatted . '</td>
                 </tr>
+                <tr>
+                  <td style="padding: 8px 0; vertical-align: top;"><strong style="color: #1f2937; display: inline-block; width: 140px;">How did you find us?:</strong></td>
+                  <td style="color: #1f2937;">' . ($findUs ?: 'Not specified') . '</td>
+                </tr>
               </table>
 
               <div style="margin-top: 20px;">
@@ -217,6 +226,7 @@ try {
                   <li><strong>Subject:</strong> ' . $subject . '</li>
                   <li><strong>Business Type:</strong> ' . ($businessType ?: '<span style="color: #6b7280;">Not specified</span>') . '</li>
                   <li><strong>Services:</strong> ' . $servicesFormatted . '</li>
+                  <li><strong>How did you find us?</strong> '. ($findUs ?: 'Not specified') .'</li>
                 </ul>
               </div>
 

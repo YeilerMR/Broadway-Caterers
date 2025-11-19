@@ -210,6 +210,19 @@ section.relative.about-hero-bg .relative.z-10 p {
     justify-content: center;
 }
 
+/* Team Member Image - Responsive */
+.bg-white.rounded-2xl.shadow-lg .md\:w-1\/3 {
+  padding: 0 !important; /* Elimina el padding que tenía antes */
+}
+
+/* Asegurar que la imagen se muestre correctamente */
+.bg-white.rounded-2xl.shadow-lg .md\:w-1\/3 img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 /* Why Choose Us Cards */
 .py-20.bg-white.grid.md\:grid-cols-2.lg\:grid-cols-3.gap-8 > div {
     background-color: var(--bg-white);
