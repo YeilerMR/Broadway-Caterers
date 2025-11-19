@@ -87,6 +87,7 @@ function validateForm(form) {
   const phone = form.querySelector("#phone");
   const subject = form.querySelector("#subject");
   const message = form.querySelector("#message");
+  const findUs = document.getElementById('findUs');
 
   // Limpiar errores previos
   [name, email, phone, subject, message].forEach(clearFieldError);
@@ -121,6 +122,10 @@ function validateForm(form) {
     setFieldError(message, "Message is required.");
     isValid = false;
   }
+  if (!findUs || !findUs.value.trim()) {
+  setFieldError(findUs, 'Please select how you found us.');
+  isValid = false;
+}
 
   // Validar servicios
   const services = form.querySelectorAll('input[name="services[]"]:checked');

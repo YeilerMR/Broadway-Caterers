@@ -86,6 +86,17 @@ section.relative.services-hero-bg .relative.z-10 p {
     color: var(--text-light);
 }
 
+.title-plan{
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: var(--bg-white);
+    transition: color 0.3s ease;
+}
+.title-plan:hover{
+    color: var(--text-light);
+}
+
 .bg-white.rounded-2xl.shadow-lg.border.border-gray-100.overflow-hidden p {
     color: var(--text-dark);
     margin-bottom: 1.5rem;
@@ -105,6 +116,20 @@ section.relative.services-hero-bg .relative.z-10 p {
     display: inline-flex;
     align-items: center;
     justify-content: center;
+}
+
+/* Badge "Most Popular" - SIEMPRE VISIBLE */
+.most-popular-badge {
+  position: absolute;
+  top: 0.75rem;    /* = top-4 */
+  right: 0.75rem;  /* = right-4 */
+  background-color: white;
+  color: #e49312; /* tu color dorado */
+  font-weight: 600;
+  font-size: 0.85rem;
+  border-radius: 9999px;
+  padding: 0.25rem 0.75rem;
+  z-index: 10;
 }
 
 .bg-white.rounded-2xl.shadow-lg.border.border-gray-100.overflow-hidden ul.space-y-3 li.text-gray-500 i {

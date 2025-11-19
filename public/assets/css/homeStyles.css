@@ -2,10 +2,11 @@
 
       /* Hero Section - Más impactante */
       .hero-bg {
-        background-image: url("https://readdy.ai/api/search-image?query=elegant%20catering%20event%20setup%20with%20professional%20licensing%20documents%20modern%20business%20atmosphere%20warm%20lighting%20sophisticated%20dining%20room%20setup&width=1920&height=1080&seq=hero1&orientation=landscape");
+        background-image: url("/../Broadway-Caterers/public/assets/images/Tampa3.png");
         background-size: cover;
         background-position: center;
         background-attachment: fixed;
+        
       }
 
       section.relative.h-screen {

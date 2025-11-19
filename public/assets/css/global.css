@@ -51,7 +51,7 @@ header nav {
 header .flex > div:first-child {
   font-size: 1.5rem;
   color: var(--primary);
-  font-weight: bold;
+  /* font-weight: bold; */
   transition: color 0.3s ease;
 }
 
@@ -130,7 +130,7 @@ footer {
 footer .font-\[\'Pacifico\'\] {
   font-size: 1.5rem;
   color: white;
-  font-weight: bold;
+  /* font-weight: bold; */
   margin-bottom: 1rem;
 }
 
@@ -251,6 +251,15 @@ footer .border-t a:hover {
 
   .py-20.bg-primary p {
     font-size: 1rem;
+  }
+
+  .bg-white.rounded-2xl.shadow-lg .md\:w-1\/3 {
+    width: 100% !important;
+    height: 500px; /* Ajusta esta altura según prefieras */
+  }
+  
+  .bg-white.rounded-2xl.shadow-lg .md\:w-2\/3 {
+    width: 100% !important;
   }
 
   footer {
