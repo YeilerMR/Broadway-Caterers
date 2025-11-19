@@ -18,16 +18,17 @@ document.addEventListener("DOMContentLoaded", function () {
   function startCounter() {
     counters.forEach((counter) => {
       const target = parseInt(counter.getAttribute("data-target"));
+      const suffix = counter.getAttribute('data-suffix' || "");
       const increment = target / 100;
       let current = 0;
 
       const timer = setInterval(() => {
         current += increment;
         if (current >= target) {
-          counter.textContent = target;
+          counter.textContent = target + suffix;
           clearInterval(timer);
         } else {
-          counter.textContent = Math.floor(current);
+          counter.textContent = Math.floor(current) + suffix;
         }
       }, 20);
     });
