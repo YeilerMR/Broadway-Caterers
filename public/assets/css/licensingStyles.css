@@ -94,7 +94,7 @@ section.relative.licensing-hero-bg .relative.z-10 p {
 
 .bg-white.rounded-2xl.shadow-lg.border.border-gray-100.overflow-hidden .bg-primary p {
     opacity: 0.9;
-    font-size: 0.95rem;
+    font-size: 1.1rem;
     color: #f9fafb;
 }
 
@@ -116,13 +116,13 @@ section.relative.licensing-hero-bg .relative.z-10 p {
 .bg-white.rounded-2xl.shadow-lg.border.border-gray-100.overflow-hidden p.text-gray-600 {
     color: var(--text-dark);
     margin-bottom: 1rem;
-    font-size: 1rem;
+    font-size: 1.3rem;
 }
 
 .bg-white.rounded-2xl.shadow-lg.border.border-gray-100.overflow-hidden ul li {
     display: flex;
     align-items: center;
-    font-size: 0.95rem;
+    font-size: 1.3rem;
     color: var(--text-dark);
 }
 
