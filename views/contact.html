@@ -6,7 +6,7 @@
         <div class="absolute inset-0 bg-black bg-opacity-50"></div>
         <div class="relative z-10 text-center text-white max-w-4xl mx-auto px-6 py-20">
             <h1 class="text-5xl md:text-6xl font-bold mb-6">Get In Touch</h1>
-            <p class="text-xl md:text-2xl opacity-90">Ready to Launch Your Business? Contact Us Today for Expert Guidance!</p>
+            <p class="text-xl md:text-2xl opacity-90">Ready to Launch Your Business? Contact Us and Speak with a Manager Today!</p>
         </div>
     </section>
 
@@ -158,13 +158,17 @@
                                     <select id="businessType" name="businessType" 
                                             class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary transition-colors field-input">
                                         <option value="">Select a business type...</option>
-                                        <option value="catering">Catering Company</option>
-                                        <option value="foodtruck">Food Truck</option>
-                                        <option value="restaurant">Restaurant</option>
-                                        <option value="bakery">Bakery</option>
-                                        <option value="commissary">Commissary Kitchen</option>
-                                        <option value="other">Other Food Business</option>
-                                        <option value="nonFood">Non-Food Business</option>
+                                        <option value="Bakery">Bakery</option>
+                                        <option value="Beverage">Beverage</option>
+                                        <option value="Catering Company">Catering Company</option>
+                                        <option value="CBD/Hemp">CBD/Hemp</option>
+                                        <option value="Food Truck">Food Truck</option>
+                                        <option value="Ghost Kitchen">Ghost Kitchen</option>
+                                        <option value="Hot Dog Cart">Hot Dog Cart</option>
+                                        <option value="Ice Cream">Ice Cream</option>
+                                        <option value="Meal Prep">Meal Prep</option>
+                                        <option value="Packaged Food">Packaged Food</option>
+                                        <option value="other">Other</option>
                                     </select>
                                 </div>
                             </div>
@@ -204,44 +208,49 @@
                                 <div class="grid md:grid-cols-2 gap-4">
                                     <div class="space-y-3">
                                         <label class="flex items-center">
-                                            <input type="checkbox" name="services[]" value="commissary" class="rounded border-gray-300 text-primary focus:ring-primary mr-3">
+                                            <input type="checkbox" name="services[]" value="Commissary Kitchen" class="rounded border-gray-300 text-primary focus:ring-primary mr-3">
                                             <span class="text-gray-700">Commissary Kitchen</span>
                                         </label>
                                         <label class="flex items-center">
-                                            <input type="checkbox" name="services[]" value="licensing" class="rounded border-gray-300 text-primary focus:ring-primary mr-3">
+                                            <input type="checkbox" name="services[]" value="Food Manager's Exam" class="rounded border-gray-300 text-primary focus:ring-primary mr-3">
                                             <span class="text-gray-700">Food Manager's Exam</span>
                                         </label>
                                         <label class="flex items-center">
-                                            <input type="checkbox" name="services[]" value="foodtruck" class="rounded border-gray-300 text-primary focus:ring-primary mr-3">
-                                            <span class="text-gray-700">FDACS License</span>
+                                            <input type="checkbox" name="services[]" value="LLC/EIN" class="rounded border-gray-300 text-primary focus:ring-primary mr-3">
+                                            <span class="text-gray-700">LLC/EIN</span>
                                         </label>
                                         <label class="flex items-center">
-                                            <input type="checkbox" name="services[]" value="foodtruck" class="rounded border-gray-300 text-primary focus:ring-primary mr-3">
-                                            <span class="text-gray-700">Sales Tax Registration</span>
+                                            <input type="checkbox" name="services[]" value="BTR Registration" class="rounded border-gray-300 text-primary focus:ring-primary mr-3">
+                                            <span class="text-gray-700">BTR Registration</span>
                                         </label>
                                         
+                                        <!-- <label class="flex items-center">
+                                            <input type="checkbox" name="services[]" value="other" class="rounded border-gray-300 text-primary focus:ring-primary mr-3">
+                                            <span class="text-gray-700">DBPR/FDACS Lincense</span>
+                                        </label> -->
                                         
                                     </div>
                                     <div class="space-y-3">
                                         <label class="flex items-center">
-                                            <input type="checkbox" name="services[]" value="other" class="rounded border-gray-300 text-primary focus:ring-primary mr-3">
+                                            <input type="checkbox" name="services[]" value="Catering Services" class="rounded border-gray-300 text-primary focus:ring-primary mr-3">
                                             <span class="text-gray-700">Catering Services</span>
                                         </label>
                                         <label class="flex items-center">
-                                            <input type="checkbox" name="services[]" value="catering" class="rounded border-gray-300 text-primary focus:ring-primary mr-3">
-                                            <span class="text-gray-700">DBPR License</span>
+                                            <input type="checkbox" name="services[]" value="DBPR/FDACS License" class="rounded border-gray-300 text-primary focus:ring-primary mr-3">
+                                            <span class="text-gray-700">DBPR/FDACS License</span>
                                         </label>
                                         
                                         <label class="flex items-center">
-                                            <input type="checkbox" name="services[]" value="certification" class="rounded border-gray-300 text-primary focus:ring-primary mr-3">
-                                            <span class="text-gray-700">LLC/EIN</span>
+                                            <input type="checkbox" name="services[]" value="Sales Tax Registration" class="rounded border-gray-300 text-primary focus:ring-primary mr-3">
+                                            <span class="text-gray-700">Sales Tax Registration</span>
                                         </label>
                                         
                                         <label class="flex items-center">
-                                            <input type="checkbox" name="services[]" value="other" class="rounded border-gray-300 text-primary focus:ring-primary mr-3">
+                                            <input type="checkbox" name="services[]" value="Other Services" class="rounded border-gray-300 text-primary focus:ring-primary mr-3">
                                             <span class="text-gray-700">Other Services</span>
                                         </label>
                                     </div>
+                                   
                                 </div>
                             </div>
                             <div style="margin-bottom: 2rem;">
@@ -279,7 +288,7 @@
                 <div>
                     <h3 class="text-3xl font-bold text-gray-900 mb-6">Serving Florida Businesses Statewide</h3>
                     <p class="text-lg text-gray-600 mb-8">
-                        While we're based in Florida, we serve clients throughout the state with our comprehensive licensing and commissary services. Whether you're in Miami, Orlando, Tampa, or anywhere in between, we're here to help your business succeed.
+                        While we're based in Tampa, Florida, we serve clients throughout the entire state with our comprehensive licensing and commissary services. Whether you're in Miami, Orlando, Jacksonville, or anywhere in between, count on Broadway Commissary to help your business succeed.
                     </p>
                     <div class="grid grid-cols-2 gap-6">
                         <div>
@@ -302,7 +311,7 @@
                             <ul class="space-y-3">
                                 <li class="flex items-center text-gray-700">
                                     <i class="fas fa-check text-primary mr-3"></i>
-                                    Hillsborough County
+                                    Polk County
                                 </li>
                                 <li class="flex items-center text-gray-700">
                                     <i class="fas fa-check text-primary mr-3"></i>
