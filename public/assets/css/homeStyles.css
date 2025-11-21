@@ -2,7 +2,7 @@
 
       /* Hero Section - Más impactante */
       .hero-bg {
-        background-image: url("/../Broadway-Caterers/public/assets/images/Tampa3.png");
+        background-image: url("/public/assets/images/Tampa3.png");
         background-size: cover;
         background-position: center;
         background-attachment: fixed;
